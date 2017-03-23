@@ -17,14 +17,10 @@
     <EnlistmentRoot>$(MSBuildThisFileDirectory.TrimEnd('\\'))</EnlistmentRoot>
 
     <!--
-      A location to restore NuGet packages to.  This normally defaults to $(SolutionDir)\packages but when building
-      from the command-line, $(SolutionDir) is not always set.
-      
-      IMPORTANT: If you change this path, you'll also need to update the "repositoryPath" in NuGet.config because
-      that is the value used by Visual Studio.
+      CBTIntermediateOutputPath determines where the generated files from CBT will go.  The default location is under
+      %TEMP%\CBT but we recommend that the files exist under the enlistment instead for easy clean up.  By placing them
+      under .build\obj they will be ignored because that folder is listed in the .gitignore file.
     -->
-
-    <!--<NuGetPackagesPath Condition=" '$(NuGetPackagesPath)' == '' ">$(EnlistmentRoot)\src\packages</NuGetPackagesPath>-->
 
     <CBTIntermediateOutputPath Condition=" '$(CBTIntermediateOutputPath)' == '' ">$(EnlistmentRoot)\.build\obj</CBTIntermediateOutputPath>
   </PropertyGroup>
