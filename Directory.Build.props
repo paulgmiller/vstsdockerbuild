@@ -43,6 +43,7 @@
       CloudBuild requires that outputs be placed in obj or objd rather than bin
     -->
     <BaseIntermediateOutputPath Condition=" '$(Configuration)' == 'Debug' ">objd\</BaseIntermediateOutputPath>
+    <BaseIntermediateOutputPath Condition=" '$(BaseIntermediateOutputPath)' == '' ">obj\</BaseIntermediateOutputPath>
 
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)$(Platform)\</IntermediateOutputPath>
 
