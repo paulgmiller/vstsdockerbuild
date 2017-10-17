@@ -3,5 +3,7 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <CBTModuleRestoreCommand>$(CBTLocalPath)\NuGet\NuGet.exe</CBTModuleRestoreCommand>
+    <NuGetMsBuildPath>$(MSBuildBinPath)</NuGetMsBuildPath>
+    <CBTModuleRestoreCommandAdditionalArguments>$(CBTModuleRestoreCommandAdditionalArguments) -MSBuildPath &quot;$(NuGetMsBuildPath)&quot;</CBTModuleRestoreCommandAdditionalArguments>
   </PropertyGroup>
 </Project>

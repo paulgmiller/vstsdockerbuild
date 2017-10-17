@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <NuGetDeterministicPropsWasImported>true</NuGetDeterministicPropsWasImported>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MSTest.TestAdapter">
+      <version>[1.1.18]</version>
+      <sha512>vtbZr0cOcv9nin0WP7ROlE6sPkWoNBiOH6SVB/4X9qkjDKfniT9+ygpXFpI10NqRmk5xK60a/dK+I7tkS16CEw==</sha512>
+      <path>mstest.testadapter/1.1.18</path>
+      <hashFileName>mstest.testadapter.1.1.18.nupkg.sha512</hashFileName>
+    </PackageReference>
+    <PackageReference Include="MSTest.TestFramework">
+      <version>[1.1.18]</version>
+      <sha512>EwG96XXPvZnqGkWVhQnh1H/KU0orFbRCUxWYa5FQA9/DsnV4qZEQWf6CeeQvmLBjZ7Ly36Gsi4jbqpRI84KA/w==</sha512>
+      <path>mstest.testframework/1.1.18</path>
+      <hashFileName>mstest.testframework.1.1.18.nupkg.sha512</hashFileName>
+    </PackageReference>
+  </ItemGroup>
+</Project>

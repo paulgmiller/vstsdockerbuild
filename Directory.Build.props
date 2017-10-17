@@ -15,7 +15,10 @@
       Enlistment root is based off of wherever this file is.  Be sure not to set this property anywhere else.
     -->
     <EnlistmentRoot>$(MSBuildThisFileDirectory.TrimEnd('\\'))</EnlistmentRoot>
-    
+ 
+    <!-- Enable CBT.DotNetFx-net46 build package to be used globally -->
+    <EnableCBT_DotNetFx-net46>true</EnableCBT_DotNetFx-net46>
+   
   </PropertyGroup>
 
   <!--

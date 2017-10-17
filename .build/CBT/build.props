@@ -24,34 +24,11 @@
   <Import Project="$(CBTLocalBuildExtensionsPath)\Before.$(MSBuildThisFile)" Condition=" '$(CBTLocalBuildExtensionsPath)' != '' And Exists('$(CBTLocalBuildExtensionsPath)\Before.$(MSBuildThisFile)') " />
 
   <PropertyGroup>
-    <CBTModulePackageConfigPath Condition=" '$(CBTModulePackageConfigPath)' == '' And '$(CBTLocalPath)' != '' And Exists('$(CBTLocalPath)\CBTModules\project.json') ">$([System.IO.Path]::Combine($(CBTLocalPath), 'CBTModules', 'project.json'))</CBTModulePackageConfigPath>
-    <CBTModulePackageConfigPath Condition=" '$(CBTModulePackageConfigPath)' == '' And '$(CBTLocalPath)' != '' And Exists('$(CBTLocalPath)\project.json') ">$([System.IO.Path]::Combine($(CBTLocalPath), 'project.json'))</CBTModulePackageConfigPath>
+    <CBTModulePackageConfigPath Condition=" '$(CBTModulePackageConfigPath)' == '' And '$(CBTLocalPath)' != '' And Exists('$(CBTLocalPath)\CBTModules\CBTModules.proj') ">$([System.IO.Path]::Combine($(CBTLocalPath), 'CBTModules', 'CBTModules.proj'))</CBTModulePackageConfigPath>
+    <CBTModulePackageConfigPath Condition=" '$(CBTModulePackageConfigPath)' == '' And '$(CBTLocalPath)' != '' And Exists('$(CBTLocalPath)\CBTModules.proj') ">$([System.IO.Path]::Combine($(CBTLocalPath), 'CBTModules.proj'))</CBTModulePackageConfigPath>
     <CBTModulePackageConfigPath Condition=" '$(CBTModulePackageConfigPath)' == '' And '$(CBTLocalPath)' != '' And Exists('$(CBTLocalPath)\CBTModules\packages.config') ">$([System.IO.Path]::Combine($(CBTLocalPath), 'CBTModules', 'packages.config'))</CBTModulePackageConfigPath>
     <CBTModulePackageConfigPath Condition=" '$(CBTModulePackageConfigPath)' == '' And '$(CBTLocalPath)' != '' And Exists('$(CBTLocalPath)\packages.config') ">$([System.IO.Path]::Combine($(CBTLocalPath), 'packages.config'))</CBTModulePackageConfigPath>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(CBTModulePackageConfigPath)' != '' And '$([System.IO.Path]::GetFileName($(CBTModulePackageConfigPath)))' == 'packages.config' ">
-    <!--
-      For NuGet v2 / packages.config the package path is determined in the following order:
-      - User specified path at the command-line
-      - In a NuGet.config via the repositoryPath setting
-      - $(SolutionDir)\packages if restoring a solution or a solution directory is specified at the command-line
-      - $(MSBuildProjectDirectory)\..\packages if restoring a project only
-      
-      The path is created here as a fall back so that the $(SolutionDir) and $(MSBuildProjectDirectory) don't have to be pass during module restoration.
-      If the user specifies a value for $(NuGetPackagesPath), then it will be used, then the NuGet setting, and then finally this fall back value
-    -->
-    <CBTPackagesFallbackPath Condition=" '$(CBTPackagesFallbackPath)' == '' And '$(SolutionDir)' != '' And '$(SolutionDir)' != '*Undefined*' And Exists('$(SolutionDir)')">$([System.IO.Path]::Combine($(SolutionDir), 'packages'))</CBTPackagesFallbackPath>
-    <CBTPackagesFallbackPath Condition=" '$(CBTPackagesFallbackPath)' == '' ">$([System.IO.Path]::Combine($([System.IO.Path]::GetDirectoryName($(MSBuildProjectDirectory))), 'packages'))</CBTPackagesFallbackPath>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(CBTModulePackageConfigPath)' != '' And '$([System.IO.Path]::GetFileName($(CBTModulePackageConfigPath)))' == 'project.json' ">
-    <!--
-      For NuGet v3 / project.json the package path is determined in the following order:
-      - User specified at the command line
-      - The value of the %NUGET_PACKAGES% environment variable
-      - In a NuGet.config via the globalPackagesFolder
-    -->
+    <CBTModulePackageConfigPath Condition=" '$(CBTModulePackageConfigPath)' != '' ">$([System.IO.Path]::GetFullPath($(CBTModulePackageConfigPath)))</CBTModulePackageConfigPath>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -63,7 +40,7 @@
 
   <PropertyGroup Condition=" '$(EnlistmentRoot)' != '' And '$(CBTModulePackageConfigPath)' != '' ">
     <CBTIntermediateOutputPath Condition=" '$(CBTIntermediateOutputPath)' == '' ">$(MSBuildThisFileDirectory)obj</CBTIntermediateOutputPath>
-    
+
     <CBTModulePath Condition=" '$(CBTModulePath)' == '' ">$(CBTIntermediateOutputPath)\Modules</CBTModulePath>
     <CBTModulePropertiesFile Condition=" '$(CBTModulePropertiesFile)' == '' ">$(CBTModulePath)\$(MSBuildThisFile)</CBTModulePropertiesFile>
     <CBTModuleExtensionsPath Condition=" '$(CBTModuleExtensionsPath)' == '' ">$(CBTModulePath)\Extensions</CBTModuleExtensionsPath>
@@ -76,8 +53,25 @@
     <CBTModuleRestoreTaskName Condition=" '$(CBTModuleRestoreTaskName)' == '' ">CBT.Core.Tasks.RestoreModules</CBTModuleRestoreTaskName>
     <CBTModuleRestoreCommand Condition=" '$(CBTModuleRestoreCommand)' == '' ">$(CBTNuGetBinDir)\NuGet.exe</CBTModuleRestoreCommand>
     <CBTModuleRestoreCommandArguments Condition=" '$(CBTModuleRestoreCommandArguments)' == '' ">restore &quot;$(CBTModulePackageConfigPath)&quot; -NonInteractive</CBTModuleRestoreCommandArguments>
+    <CBTModuleRestoreCommandArguments Condition=" '$(CBTModuleRestoreCommandAdditionalArguments)' != '' ">$(CBTModuleRestoreCommandArguments) $(CBTModuleRestoreCommandAdditionalArguments)</CBTModuleRestoreCommandArguments>
 
-    <CBTModulesRestored Condition=" '$(RestoreCBTModules)' != 'false' And '$(BuildingInsideVisualStudio)' != 'true' And '$(CBTModulesRestored)' != 'true' And Exists('$(CBTCoreAssemblyPath)') ">$(CBTCoreAssemblyPath.GetType().Assembly.GetType('System.AppDomain').GetProperty('CurrentDomain').GetValue(null, null).CreateInstanceFromAndUnwrap($(CBTCoreAssemblyPath), $(CBTModuleRestoreTaskName)).Execute($(CBTModuleImportsAfter.Split(';')), $(CBTModuleImportsBefore.Split(';')), $(CBTModuleExtensionsPath), $(CBTModulePropertiesFile), $(CBTNuGetDownloaderAssemblyPath), $(CBTNuGetDownloaderClassName), '$(CBTNuGetDownloaderArguments)', $(CBTModuleRestoreInputs.Split(';')), $(CBTModulePackageConfigPath), $(NuGetPackagesPath), $(CBTPackagesFallbackPath), $(CBTModuleRestoreCommand), $(CBTModuleRestoreCommandArguments), $(MSBuildProjectFullPath)))</CBTModulesRestored>
+    <!-- Do not restore CBT modules when NuGet is evaluating CBTModules.proj. -->
+    <RestoreCBTModules Condition=" $(RestoreGraphProjectInput.Contains($(CBTModulePackageConfigPath))) ">false</RestoreCBTModules>
+    <!--
+      Evaluating this property loads CBT.Core.dll as a byte[] and stores the result in the AppDomain via SetData().  This is the only way we could find to load an assembly from bytes and be able to access it in a later call.
+      Normally when assemblies are loaded with this context, other calls can't reuse the loaded assembly.  Since the Assembly object is stored in the data of the AppDomain, subsequent calls can access via the GetData() method.
+      The condition on this property also ensures that the Assembly is only loaded once per AppDomain and since property evaluation is single threaded we don't have to worry about synchronization.  Another piece of this
+      property is that the the SetData() method returns void so immediately after SetData() we call GetData() which returns the Assembly and the property evaluates to something like:
+        "CBT.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+      
+      If the CBTCoreAssemblyName property has a value then we know we were able to successfully load the assembly.
+      
+      The most complicated part of this call is how to get an object[] to pass to the ReadAllBytes() method.  MSBuild coerces the arguments to a method but creating a populated object[] with one call is not possible.  By calling
+      System.IO.Directory.GetFiles(), we are returned a string[] which MSBuild coerces to an object[] to ReadAllBytes().  
+    -->
+    <CBTCoreAssemblyName Condition=" Exists('$(CBTCoreAssemblyPath)') And '$(CBTCoreAssemblyPath.GetType().Assembly.GetType(`System.AppDomain`).GetProperty(`CurrentDomain`).GetValue(null).GetData(`CBT_CORE_ASSEMBLY`))' == '' ">$(CBTCoreAssemblyPath.GetType().Assembly.GetType('System.AppDomain').GetProperty('CurrentDomain').GetValue(null).SetData('CBT_CORE_ASSEMBLY', $(CBTCoreAssemblyPath.GetType().Assembly.GetType('System.AppDomain').GetProperty('CurrentDomain').GetValue(null).Load($(CBTCoreAssemblyPath.GetType().Assembly.GetType('System.IO.File').GetMethod('ReadAllBytes').Invoke(null, $([System.IO.Directory]::GetFiles($([System.IO.Path]::GetDirectoryName($(CBTCoreAssemblyPath))), $([System.IO.Path]::GetFileName($(CBTCoreAssemblyPath)))))))))))</CBTCoreAssemblyName> 
+    <CBTCoreAssemblyName>$(CBTCoreAssemblyPath.GetType().Assembly.GetType('System.AppDomain').GetProperty('CurrentDomain').GetValue(null).GetData('CBT_CORE_ASSEMBLY'))</CBTCoreAssemblyName> 
+    <CBTModulesRestored Condition=" '$(RestoreCBTModules)' != 'false' And '$(BuildingInsideVisualStudio)' != 'true' And '$(CBTModulesRestored)' != 'true' And '$(CBTCoreAssemblyName)' != '' ">$(CBTCoreAssemblyPath.GetType().Assembly.GetType('System.AppDomain').GetProperty('CurrentDomain').GetValue(null).GetData('CBT_CORE_ASSEMBLY').CreateInstance($(CBTModuleRestoreTaskName)).Execute($(CBTModuleImportsAfter.Split(';')), $(CBTModuleImportsBefore.Split(';')), $(CBTModuleExtensionsPath), $(CBTModulePropertiesFile), $(CBTNuGetDownloaderAssemblyPath), $(CBTNuGetDownloaderClassName), '$(CBTNuGetDownloaderArguments)', $(CBTModuleRestoreInputs.Split(';')), $(CBTModulePackageConfigPath), $(CBTModuleRestoreCommand), $(CBTModuleRestoreCommandArguments), $(MSBuildProjectFullPath)))</CBTModulesRestored>
 
   </PropertyGroup>
 
@@ -88,7 +82,7 @@
     <CBTParseError Condition=" '$(CBTModulesRestored)' == 'false' " Include="Modules were not restored and the build cannot continue.  Refer to other errors for more information.">
       <Code>CBT1001</Code>
     </CBTParseError>
-    <CBTParseError Condition=" '$(CBTModulePackageConfigPath)' == '' " Include="The CBT modules packages.config or project.json file was not found under $(CBTLocalPath) or $(CBTLocalPath)\CBTModules.  Please add a cbt modules packages file or set the property 'CBTModulePackageConfigPath' to a custom module packages file.">
+    <CBTParseError Condition=" '$(CBTModulePackageConfigPath)' == '' " Include="The CBT module configuration file packages.config or CBTModules.proj was not found under $(CBTLocalPath) or $(CBTLocalPath)\CBTModules.  Please add a CBT module package configuration file or set the property 'CBTModulePackageConfigPath' to your custom location.">
       <Code>CBT1002</Code>
     </CBTParseError>
   </ItemGroup>
@@ -96,15 +90,16 @@
   <Import Project="$(CBTModulePropertiesFile)" Condition=" ('$(CBTModulesRestored)' == 'true' Or '$(BuildingInsideVisualStudio)' == 'true') And Exists('$(CBTModulePropertiesFile)') "/>
 
   <UsingTask TaskName="RestoreModules" AssemblyFile="$(CBTCoreAssemblyPath)" />
+  <UsingTask TaskName="WriteModuleRestoreInfo" AssemblyFile="$(CBTCoreAssemblyPath)" />
 
   <Target Name="ShowCBTParseErrors" Condition=" '@(CBTParseError)' != '' ">
     <Error Text="%(CBTParseError.Identity)" Code="%(CBTParseError.Code)" />
   </Target>
 
   <Target Name="RestoreCBTModules"
-      Condition=" '$(RestoreCBTModules)' != 'false' And '$(CBTModulesRestored)' != 'true' "
-      Inputs="$(CBTModuleRestoreInputs)"
-      Outputs="$([MSBuild]::ValueOrDefault($(CBTModulePropertiesFile), 'null'))">
+          Condition=" '$(RestoreCBTModules)' != 'false' And '$(CBTModulesRestored)' != 'true' "
+          Inputs="$(CBTModuleRestoreInputs)"
+          Outputs="$([MSBuild]::ValueOrDefault($(CBTModulePropertiesFile), 'null'))">
 
     <RestoreModules
       AfterImports="$(CBTModuleImportsAfter.Split(';'))"
@@ -115,11 +110,10 @@
       NuGetDownloaderClassName="$(CBTNuGetDownloaderClassName)"
       NuGetDownloaderArguments="$(CBTNuGetDownloaderArguments)"
       PackageConfig="$(CBTModulePackageConfigPath)"
-      PackagesFallbackPath="$(CBTPackagesFallbackPath)"
-      PackagesPath="$(NuGetPackagesPath)"
       ProjectFullPath="$(MSBuildProjectFullPath)"
       RestoreCommand="$(CBTModuleRestoreCommand)"
-      RestoreCommandArguments="$(CBTModuleRestoreCommandArguments)" />
+      RestoreCommandArguments="$(CBTModuleRestoreCommandArguments)"
+    />
 
     <PropertyGroup>
       <CBTModulesRestored Condition=" '$(CBTModulesRestored)' != 'true' ">true</CBTModulesRestored>
@@ -127,6 +121,26 @@
 
   </Target>
 
+  <!-- _GenerateRestoreProjectSpec is a from the nuget.targets new to NuGet 4.x. -->
+  <Target Name="GenerateModuleRestoreInfo" AfterTargets="_GenerateRestoreProjectSpec" Condition=" '$(RestoreOutputAbsolutePath)' != '' And '$(MSBuildProjectFullPath)' == '$(CBTModulePackageConfigPath)' " >
+    <ItemGroup>
+      <CBTModuleRestoreInfo Remove="@(CBTModuleRestoreInfo)"/>
+      <CBTModuleRestoreInfo Include="ProjectJsonPath">
+        <value>$(_CurrentProjectJsonPath)</value>
+      </CBTModuleRestoreInfo>
+      <CBTModuleRestoreInfo Include="RestoreProjectStyle">
+        <value>$(RestoreProjectStyle)</value>
+      </CBTModuleRestoreInfo>
+      <CBTModuleRestoreInfo Include="RestoreOutputAbsolutePath">
+        <value>$(RestoreOutputAbsolutePath)</value>
+      </CBTModuleRestoreInfo>
+      <CBTModuleRestoreInfo Include="PackageReference">
+        <id>%(PackageReference.Identity)</id>
+        <version>%(PackageReference.Version)</version>
+      </CBTModuleRestoreInfo>
+    </ItemGroup>
+    <WriteModuleRestoreInfo File="$(CBTModuleRestoreInfoFile)" Input="@(CBTModuleRestoreInfo)" />
+  </Target>
   <Import Project="$(CBTLocalBuildExtensionsPath)\After.$(MSBuildThisFile)" Condition=" '$(CBTLocalBuildExtensionsPath)' != '' And Exists('$(CBTLocalBuildExtensionsPath)\After.$(MSBuildThisFile)') " />
 
 </Project>
