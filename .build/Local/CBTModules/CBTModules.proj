@@ -8,15 +8,15 @@
     This file contains the CBT modules that you want to use.  Modules are standard NuGet packages that apply to the
     whole project tree rather than on a per-project basis.  Modules provide extensions to your build in a centralized
     way and act as a replacement of having to check-in all of the build logic.
-    
+
     Modules include build extensions such as:
-    
+
       1. Analyzing source code and/or build output
       2. Assembly versioning
       3. Policy enforcement
       4. Strong-name signing of build output
-      5. 
-    
+      5.
+
     To find more modules, use "NuGet.exe list CBT.*" or browse a list at http://commonbuildtoolset.github.io
     *******************************************************************************************************************
   -->
@@ -44,7 +44,7 @@
     *******************************************************************************************************************
     CBT.AssemblyInfo module provides assembly information and versioning.  The default versioning is date-based but can
     be customized to suite your needs.
-  
+
     When using the module, you'll have to remove the duplicate assembly attributes which are set by Visual Studio
     templates in each project's "Properties\AssemblyInfo.cs"
     *******************************************************************************************************************
@@ -74,6 +74,6 @@
     CBT.CloudBuild configures your projects for CloudBuild and QuickBuild
     *******************************************************************************************************************
   -->
-    <PackageReference Include="CBT.CloudBuild" Version="1.0.0-beta14" />
+    <PackageReference Include="CBT.CloudBuild" Version="1.2.2" />
   </ItemGroup>
 </Project>
