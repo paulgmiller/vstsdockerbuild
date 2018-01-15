@@ -23,7 +23,7 @@ spec:
       - image: docker:17
         name: docker
         ports:
-        - containerPort: 4243
+        - containerPort: 2375
           protocol: TCP
       #todo mount a shared volume
           
