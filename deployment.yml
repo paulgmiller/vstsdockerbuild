@@ -15,8 +15,8 @@ spec:
           app: vstsdocerkbuild
     spec:
       containers:
-      - image: paulgmiller/keepalive
-        name: keepalive
+      - image: paulgmiller/vstsdockerbuild:beta
+        name: vstsdockerbuild
         ports:
         - containerPort: 80
           protocol: TCP
