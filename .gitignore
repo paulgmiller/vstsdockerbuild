@@ -1,0 +1,90 @@
+_ReSharper*
+[Bb]in/
+obj/
+objd/
+out/
+tmp/
+packages/
+App_Data
+*.user
+.vs/
+*.sln.cache
+*.userosscache
+*.suo
+TestResults
+[Tt]humbs.db
+buildd.log
+buildd.evt
+buildd.dbb
+buildd.prf
+buildd.trc*
+buildd.err
+buildd.wrn
+build.log
+build.evt
+build.prf
+build.dbb
+build.trc*
+build.err
+build.wrn
+*.log
+*.bak
+OACRTemp/
+build_logs/
+lock
+/public/inc/bldver.*
+/public/inc/sources.ver
+/data
+*.projhash*
+*.slnhash*
+# quickbuild.exe
+/target/distrib/*
+/VersionGeneratingLogs/
+/VersionGeneration/
+QLogs
+QLocal
+QTestLogs
+pingme.txt
+
+# bad tlb/chm generators in nmake tree
+*.tlb
+*.chm
+
+# silverlight
+ClientBin/
+
+# azure
+*.build.csdef
+csx/
+/version
+/__cbcOutput/debug/amd64/private
+
+# StyleCop
+StyleCop.Cache
+
+# Team-Specific
+*.svcinfo
+*.disco
+*.wsdl
+*.xsd
+*.datasource
+/_cacheOutput/*
+Logs/
+/__cacheOutput
+
+#ignore envkeep.txt
+build/envkeep.txt
+/private/Operability/Firefly/Server/UnitTests/All/FakesAssemblies/Microsoft.Firefly.Deployment.Fakes.messages
+/private/Operability/Firefly/Server/UnitTests/All/FakesAssemblies/Microsoft.Firefly.Configuration.Fakes.messages
+/private/Operability/Firefly/Server/UnitTests/All/FakesAssemblies/Microsoft.Firefly.CommonUtils.Fakes.messages
+/private/Operability/Firefly/Server/UnitTests/All/FakesAssemblies/Microsoft.Firefly.AutoPilot.Fakes.messages
+/private/Operability/Firefly/Server/UnitTests/All/FakesAssemblies/AdCenter.DE.Deployment.WFService.Fakes.messages
+/private/Operability/Firefly/Server/UnitTests/All/FakesAssemblies/AdCenter.DE.Deployment.RequestMeta.Fakes.messages
+/private/Operability/Firefly/Server/UnitTests/All/FakesAssemblies/AdCenter.DE.Deployment.Request.Fakes.messages
+/private/Operability/Firefly/Server/UnitTests/All/FakesAssemblies/AdCenter.DE.Deployment.Core.Fakes.messages
+/private/Operability/Firefly/Server/UnitTests/All/FakesAssemblies/AdCenter.DE.Deployment.Binary.Fakes.messages
+/private/Operability/Firefly/Client/AutoDeployerService/Plugins/OneDriveSqlAzureDBDeploy/Microsoft.Firefly.Deployment.Plugins.ODDbDeploy.sln
+/private/Operability/Firefly/Client/AutoDeployerService/UnitTests/OneDriveSQLAzureDBDeploy/Microsoft.Firefly.Deployment.ODDbDeploy.Test.sln
+
+#python cache
+workflowdata/__pycache__/*
