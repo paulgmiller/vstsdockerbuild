@@ -20,10 +20,14 @@ spec:
         ports:
         - containerPort: 80
           protocol: TCP
-      - image: docker:17
+      #docker in docker might not be the best idea.https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/
+      #could instead mount the docker socker or expose the host daemon? 
+      - image: docker:17-dind
         name: docker
         ports:
         - containerPort: 2375
           protocol: TCP
-      #todo mount a shared volume
+        securityContext:
+          privileged: true
+      #todo mount a shared volume for vsts files
           
