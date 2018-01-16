@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Docker.DotNet;
 using Docker.DotNet.Models;
 using ICSharpCode.SharpZipLib.Tar;
+using Microsoft.Extensions.Logging;
 
 using Newtonsoft.Json;
 
@@ -46,30 +47,42 @@ namespace vstsdockerbuild.Controllers
 
         [HttpPost]
         [Route("Build")]
-        public async Task<IActionResult> Build([FromBody]BuildRequest req)
+        public async Task<IActionResult> Build([FromBody]BuildRequest req, 
+                                               [FromServices]ILogger<DockerController> log)
 
         {
+            //figure out so
+            var auth = new AuthConfig(){
+                Username = "paulgmiller",
+                Password =  System.Environment.GetEnvironmentVariable("dockerpassword")
+            };
+            var authdict = new Dictionary<string, AuthConfig> { 
+                { "docker.io", auth }
+            };
+
             var drop = new VSTSDropProxy(req.VSTSDropUri);
             string tempDirectory = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
+            string buildoutput; 
             try 
             {
                 await drop.Materialize(tempDirectory);
-                //this is dumb. Can we create the tar from the download streams directly?
-                var filesInDirectory = new DirectoryInfo(tempDirectory).GetFiles();
-                string tarfile = Path.Combine(tempDirectory, Path.GetRandomFileName());
-                using (TarArchive tarArchive = TarArchive.CreateOutputTarArchive(System.IO.File.Create(tarfile), TarBuffer.DefaultBlockFactor))
+                using (var tar = CreateTar(tempDirectory))
                 {
-                    foreach (FileInfo fileToBeTarred in filesInDirectory)
+                    //since apparently we use a tarball for context we don't really need to be in the same pod.
+                    var image = await _client.Images.BuildImageFromDockerfileAsync(tar, new ImageBuildParameters(){ 
+                        
+                        Tags = { req.tag },
+                        AuthConfigs = authdict
+
+                    });                        
+                    using (StreamReader reader = new StreamReader( image ))
                     {
-                        TarEntry entry = TarEntry.CreateEntryFromFile(fileToBeTarred.FullName);
-                        tarArchive.WriteEntry(entry, true);
+                        buildoutput = await reader.ReadToEndAsync();
                     }
+                    await _client.Images.PushImageAsync(req.tag, new ImagePushParameters(), auth, new ProgressDumper());
                 }
                 
-                //since apparently we use a tarball for context we don't really need to be in the same pod.
-                var image = await _client.Images.BuildImageFromDockerfileAsync(System.IO.File.OpenRead(tarfile), new ImageBuildParameters());                        
-                using (StreamReader reader = new StreamReader( image ))
-                    return Ok(reader.ReadToEndAsync());
+                return Ok(buildoutput);
             }
             finally
             {
@@ -77,13 +90,34 @@ namespace vstsdockerbuild.Controllers
             }
         }
 
+        //gross 
+        private Stream CreateTar(string directory)
+        {
+            var filesInDirectory = new DirectoryInfo(directory).GetFiles();
+            string tarfile = Path.Combine(directory, Path.GetRandomFileName());
+            using (TarArchive tarArchive = TarArchive.CreateOutputTarArchive(System.IO.File.Create(tarfile), TarBuffer.DefaultBlockFactor))
+            {
+                foreach (FileInfo fileToBeTarred in filesInDirectory)
+                {
+                    TarEntry entry = TarEntry.CreateEntryFromFile(fileToBeTarred.FullName);
+                    tarArchive.WriteEntry(entry, true);
+                }
+            }
+            return System.IO.File.Create(tarfile);
+        }
+
     }
+
+    public class ProgressDumper : IProgress<JSONMessage>
+    {
+        public void Report(JSONMessage msg) {}
+    }
+  
 
     public class BuildRequest
     {
         public string VSTSDropUri;
         public string tag;
-        //docker repo info? 
-        
+        //docker repo info?        
     }
 }
