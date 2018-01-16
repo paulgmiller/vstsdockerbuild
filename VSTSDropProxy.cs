@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 using System.Web;
 
 
-namespace DropProxy
+namespace vstsdockerbuild
 {
 
     //Let us mock out drop http calls.
