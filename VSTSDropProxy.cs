@@ -50,7 +50,7 @@ namespace vstsdockerbuild
         {
             using (var client = new HttpClient())
             {
-                var base64EncodedString = Convert.ToBase64String(Encoding.UTF8.GetBytes("client:" + GetVSTSPAT()));
+                var base64EncodedString = Convert.ToBase64String(Encoding.UTF8.GetBytes("vstsdockerbuild:" + GetVSTSPAT()));
                 client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", base64EncodedString);
                 
                 //Todo Polly for retries
@@ -118,7 +118,7 @@ namespace vstsdockerbuild
               
             if (!Uri.TryCreate(VSTSDropUri, UriKind.Absolute, out _VSTSDropUri))
             {
-                throw new Exception( "Vsts drop path is not a url" + _VSTSDropUri.ToString());
+                throw new Exception( "Vsts drop path is not a url" + VSTSDropUri);
             }
             var querystring = HttpUtility.ParseQueryString(_VSTSDropUri.Query);
             var rootvalue = querystring?.Get(RootParam);

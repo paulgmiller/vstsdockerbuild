@@ -62,7 +62,7 @@ namespace vstsdockerbuild.Controllers
 
             var drop = new VSTSDropProxy(req.VSTSDropUri);
             string tempDirectory = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
-            string buildoutput; 
+            
             try 
             {
                 await drop.Materialize(tempDirectory);
@@ -77,12 +77,12 @@ namespace vstsdockerbuild.Controllers
                     });                        
                     using (StreamReader reader = new StreamReader( image ))
                     {
-                        buildoutput = await reader.ReadToEndAsync();
+                        log.LogInformation(await reader.ReadToEndAsync());
                     }
                     await _client.Images.PushImageAsync(req.tag, new ImagePushParameters(), auth, new ProgressDumper());
                 }
                 
-                return Ok(buildoutput);
+                return Ok();
             }
             finally
             {
