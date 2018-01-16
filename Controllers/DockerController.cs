@@ -45,6 +45,18 @@ namespace vstsdockerbuild.Controllers
             return Ok(JsonConvert.SerializeObject(images));
         }
 
+        /*
+            >more .\foo.json
+{
+  VSTSDropUri : "https://msasg.artifacts.visualstudio.com/DefaultCollection/_apis/drop/drops/MSASG_CloudDeploy/4a5ab0eef87b35799d6878d51d13db7d756b4cb9/3583b457-5
+fc1-a5cc-8290-dd466e142bab?root=retail/amd64/app/helloworld",
+  tag :   "docker.io/paulgmiller/blugh:test"
+
+  >irm http://127.0.0.1:5000/docker/Build -body $json -contenttype "applica
+tion/json" -method post
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+}
+         */
         [HttpPost]
         [Route("Build")]
         public async Task<IActionResult> Build([FromBody]BuildRequest req, 
