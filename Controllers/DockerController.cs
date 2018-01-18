@@ -74,26 +74,25 @@ tion/json" -method post
             log.LogInformation($"fechign manifest for {req.VSTSDropUri}");
             var drop = new VSTSDropProxy(req.VSTSDropUri);
             string tempDirectory = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
+            var imageparams = new ImageBuildParameters();
+            imageparams.Tags = new List<string> {req.tag};
+            imageparams.AuthConfigs = authdict;
             
             try 
             {
                 log.LogInformation($"Putting {req.VSTSDropUri} in {tempDirectory}");
                 await drop.Materialize(tempDirectory);
-                /*using (var tar = CreateTar(tempDirectory))
+                
+                using (var tar = CreateTar(tempDirectory))
                 {
                     //since apparently we use a tarball for context we don't really need to be in the same pod.
-                    var image = await _client.Images.BuildImageFromDockerfileAsync(tar, new ImageBuildParameters(){ 
-                        
-                        Tags = { req.tag },
-                        AuthConfigs = authdict
-
-                    });                        
+                    var image = await _client.Images.BuildImageFromDockerfileAsync(tar, imageparams);                        
                     using (StreamReader reader = new StreamReader( image ))
                     {
                         log.LogInformation(await reader.ReadToEndAsync());
                     }
                     await _client.Images.PushImageAsync(req.tag, new ImagePushParameters(), auth, new ProgressDumper());
-                }*/
+                }
                 log.LogInformation($"Putting {req.VSTSDropUri} in {tempDirectory}");
                 return Ok(tempDirectory);
             }
