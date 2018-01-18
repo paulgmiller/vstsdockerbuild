@@ -238,12 +238,18 @@ namespace vstsdockerbuild
                 var localpath = Path.Combine(localDestiantion,localFileName).Replace("/","\\");
                 //also not efficient to check directory each time but again this method is a hack.
                 Directory.CreateDirectory(Path.GetDirectoryName(localpath));
+            }
+        
+            var downloads = _pathToUrl.Select(async file => {
+                var localFileName = file.Key.Substring(_relativeroot.Length);
+                var localpath = Path.Combine(localDestiantion,localFileName).Replace("/","\\");
                 using (var blob = await GetStream(localFileName))
                 using (var fileStream = new FileStream(localpath, FileMode.CreateNew))
                 {
-                    blob.CopyTo(fileStream);   
+                    await blob.CopyToAsync(fileStream);   
                 }
-            }
+            });
+            await Task.WhenAll(downloads);
         } 
         
 
