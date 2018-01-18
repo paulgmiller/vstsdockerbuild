@@ -18,11 +18,13 @@ namespace vstsdockerbuild.Controllers
     {
 
         private DockerClient _client;
+        private ILogger<DockerController> _log;
 
-        public DockerController()
+        public DockerController(ILogger<DockerController> log)
         {
             _client = new DockerClientConfiguration(new Uri("http://localhost:2375"))
                                      .CreateClient();
+            _log = log;                                     
         }
         
         // GET api/values
@@ -59,8 +61,7 @@ tion/json" -method post
          */
         [HttpPost]
         [Route("Build")]
-        public async Task<IActionResult> Build([FromBody]BuildRequest req, 
-                                               [FromServices]ILogger<DockerController> log)
+        public async Task<IActionResult> Build([FromBody]BuildRequest req)
 
         {
             //figure out so
@@ -71,7 +72,7 @@ tion/json" -method post
             var authdict = new Dictionary<string, AuthConfig> { 
                 { "docker.io", auth }
             };
-            log.LogInformation($"fechign manifest for {req.VSTSDropUri}");
+            _log.LogInformation($"fechign manifest for {req.VSTSDropUri}");
             var drop = new VSTSDropProxy(req.VSTSDropUri);
             string tempDirectory = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
             var imageparams = new ImageBuildParameters();
@@ -80,20 +81,21 @@ tion/json" -method post
             
             try 
             {
-                log.LogInformation($"Putting {req.VSTSDropUri} in {tempDirectory}");
+                _log.LogInformation($"Putting {req.VSTSDropUri} in {tempDirectory}");
                 await drop.Materialize(tempDirectory);
-                
                 using (var tar = CreateTar(tempDirectory))
                 {
                     //since apparently we use a tarball for context we don't really need to be in the same pod.
+                    _log.LogInformation($"Building t{req.tag}");
                     var image = await _client.Images.BuildImageFromDockerfileAsync(tar, imageparams);                        
                     using (StreamReader reader = new StreamReader( image ))
                     {
-                        log.LogInformation(await reader.ReadToEndAsync());
+                        _log.LogInformation(await reader.ReadToEndAsync());
                     }
-                    await _client.Images.PushImageAsync(req.tag, new ImagePushParameters(), auth, new ProgressDumper());
+                    _log.LogInformation($"Pushing image");
+                    await _client.Images.PushImageAsync(req.tag, new ImagePushParameters(), auth, new ProgressDumper(_log));
                 }
-                log.LogInformation($"Putting {req.VSTSDropUri} in {tempDirectory}");
+                _log.LogInformation($"Putting {req.VSTSDropUri} in {tempDirectory}");
                 return Ok(tempDirectory);
             }
             finally
@@ -104,38 +106,51 @@ tion/json" -method post
 
         [HttpPost]
         [Route("BuildTest")]
-        public async Task<IActionResult> BuildTest([FromServices]ILogger<DockerController> log)
+        public async Task<IActionResult> BuildTest()
 
         {
             var r = new BuildRequest { 
                 VSTSDropUri = "https://msasg.artifacts.visualstudio.com/DefaultCollection/_apis/drop/drops/MSASG_CloudDeploy/4a5ab0eef87b35799d6878d51d13db7d756b4cb9/3583b457-5fc1-a5cc-8290-dd466e142bab?root=retail/amd64/app/helloworld",
-                tag = "docker.io/paulgmiller/blugh:test"
+                tag = "docker.io/paulgmiller/blugh5:test"
             };
-            return await Build(r, log);
+            return await Build(r);
 
         }
 
-        //gross 
+        //gross   q
         private Stream CreateTar(string directory)
         {
             var filesInDirectory = new DirectoryInfo(directory).GetFiles();
             string tarfile = Path.Combine(directory, Path.GetRandomFileName());
             using (TarArchive tarArchive = TarArchive.CreateOutputTarArchive(System.IO.File.Create(tarfile), TarBuffer.DefaultBlockFactor))
             {
+                tarArchive.RootPath = directory; //otherwise files aren't relative.
                 foreach (FileInfo fileToBeTarred in filesInDirectory)
                 {
                     TarEntry entry = TarEntry.CreateEntryFromFile(fileToBeTarred.FullName);
                     tarArchive.WriteEntry(entry, true);
                 }
             }
-            return System.IO.File.Create(tarfile);
+            return System.IO.File.OpenRead(tarfile);
         }
 
     }
 
     public class ProgressDumper : IProgress<JSONMessage>
     {
-        public void Report(JSONMessage msg) {}
+        private ILogger<DockerController> _log;
+        public ProgressDumper(ILogger<DockerController> logger)
+        {
+            _log = logger;
+        }
+        public void Report(JSONMessage msg) {
+            try 
+            {
+                _log.LogInformation(JsonConvert.SerializeObject(msg));
+            }
+            catch (Exception e)
+            {}
+        }
     }
   
 
