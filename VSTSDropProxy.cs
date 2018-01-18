@@ -36,7 +36,9 @@ namespace vstsdockerbuild
 
         private string GetVSTSPAT()
         {
-            return System.Environment.GetEnvironmentVariable("VSTSPAT");
+            return System.Environment.GetEnvironmentVariable("VSTSPAT") ?? 
+                    throw new Exception("Set the vsts PAT");
+            
         }
 
         /// <summary>
@@ -48,23 +50,31 @@ namespace vstsdockerbuild
         public async Task<IEnumerable<VstsFile>> GetVstsManifest(Uri manifestUri, string blobapiversion, 
                                                            string relativeroot)
         {
-            using (var client = new HttpClient())
+            //dotnet core  doesn't handle vsts redirects well. Poking both teams about it
+            var noredirect = new HttpClientHandler() { AllowAutoRedirect = false };
+            using (var client = new HttpClient(noredirect))
             {
                 var base64EncodedString = Convert.ToBase64String(Encoding.UTF8.GetBytes("vstsdockerbuild:" + GetVSTSPAT()));
-                client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", base64EncodedString);
-                
                 //Todo Polly for retries
                 //Todo use microsoft.extensions.logging's ilogger
                 //logger.Log(LogLevel.Debug, $"asking for drop manifest  at {manifestUri}");
                 
-                var manifestresponse = await client.GetAsync(manifestUri);
+                var manifestreq = new HttpRequestMessage(HttpMethod.Get, manifestUri);
+                manifestreq.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", base64EncodedString);
+                
+                var manifestresponse = await client.SendAsync(manifestreq);
                 if (manifestresponse.StatusCode == HttpStatusCode.NotFound)
                 {
                     throw new ArgumentException("VSTS drop not found: " + manifestUri.ToString());
+                }                
+                if (manifestresponse.StatusCode == HttpStatusCode.RedirectMethod ||
+                    manifestresponse.StatusCode == HttpStatusCode.Redirect)
+                {
+                     manifestresponse = await client.GetAsync(manifestresponse.Headers.Location);
                 }
                 manifestresponse.EnsureSuccessStatusCode();
                 string manifestjson = await manifestresponse.Content.ReadAsStringAsync();
-                
+                     
                 //filter here so we can be case insensitve. manifest url would take a directory but unlike root in drop.exe it is case sensitve.
                 var manifest = JsonConvert.DeserializeObject<List<VstsFile>>(manifestjson)
                                     .Where(f => f.Path.StartsWith(relativeroot, StringComparison.OrdinalIgnoreCase));
@@ -83,7 +93,10 @@ namespace vstsdockerbuild
                 uriBuilder.Query = queryParameters.ToString();
                 
                 //logger.Log(LogLevel.Debug, $"asking for sas tokens at {uriBuilder.Uri}");
-                var response = await client.PostAsync(uriBuilder.Uri, content);
+                var blobreq = new HttpRequestMessage(HttpMethod.Post, uriBuilder.Uri);
+                blobreq.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", base64EncodedString);
+                blobreq.Content = content;
+                var response = await client.SendAsync(blobreq);
                 response.EnsureSuccessStatusCode();
 
                 string sasUrlJson = await response.Content.ReadAsStringAsync();

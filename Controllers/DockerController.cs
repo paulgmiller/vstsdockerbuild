@@ -71,14 +71,15 @@ tion/json" -method post
             var authdict = new Dictionary<string, AuthConfig> { 
                 { "docker.io", auth }
             };
-
+            log.LogInformation($"fechign manifest for {req.VSTSDropUri}");
             var drop = new VSTSDropProxy(req.VSTSDropUri);
             string tempDirectory = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
             
             try 
             {
+                log.LogInformation($"Putting {req.VSTSDropUri} in {tempDirectory}");
                 await drop.Materialize(tempDirectory);
-                using (var tar = CreateTar(tempDirectory))
+                /*using (var tar = CreateTar(tempDirectory))
                 {
                     //since apparently we use a tarball for context we don't really need to be in the same pod.
                     var image = await _client.Images.BuildImageFromDockerfileAsync(tar, new ImageBuildParameters(){ 
@@ -92,14 +93,27 @@ tion/json" -method post
                         log.LogInformation(await reader.ReadToEndAsync());
                     }
                     await _client.Images.PushImageAsync(req.tag, new ImagePushParameters(), auth, new ProgressDumper());
-                }
-                
-                return Ok();
+                }*/
+                log.LogInformation($"Putting {req.VSTSDropUri} in {tempDirectory}");
+                return Ok(tempDirectory);
             }
             finally
             {
                 Directory.Delete(tempDirectory, true);
             }
+        }
+
+        [HttpPost]
+        [Route("BuildTest")]
+        public async Task<IActionResult> BuildTest([FromServices]ILogger<DockerController> log)
+
+        {
+            var r = new BuildRequest { 
+                VSTSDropUri = "https://msasg.artifacts.visualstudio.com/DefaultCollection/_apis/drop/drops/MSASG_CloudDeploy/4a5ab0eef87b35799d6878d51d13db7d756b4cb9/3583b457-5fc1-a5cc-8290-dd466e142bab?root=retail/amd64/app/helloworld",
+                tag = "docker.io/paulgmiller/blugh:test"
+            };
+            return await Build(r, log);
+
         }
 
         //gross 
