@@ -17,11 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", 
 		..\.build\Local\Extensions\build.props = ..\.build\Local\Extensions\build.props
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{DEB8E334-F2F0-4842-B73B-EDA47CBD2F7F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "net46\ConsoleApp\ConsoleApp.csproj", "{DEB8E334-F2F0-4842-B73B-EDA47CBD2F7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{0BE5FF25-4FFB-4AD9-B098-F168E4ABF590}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "net46\ClassLibrary\ClassLibrary.csproj", "{0BE5FF25-4FFB-4AD9-B098-F168E4ABF590}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{2DE94F5A-7267-4E76-BD9D-6C9495FD32FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "net46\UnitTests\UnitTests.csproj", "{2DE94F5A-7267-4E76-BD9D-6C9495FD32FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

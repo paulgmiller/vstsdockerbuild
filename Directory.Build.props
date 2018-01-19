@@ -16,7 +16,9 @@
     -->
     <EnlistmentRoot>$(MSBuildThisFileDirectory.TrimEnd('\\'))</EnlistmentRoot>
  
-    <!-- Enable CBT.DotNetFx-net46 build package to be used globally -->
+    <!-- 
+      Enable CBT.DotNetFx-net46 build package to be used globally
+    -->
     <EnableCBT_DotNetFx-net46>true</EnableCBT_DotNetFx-net46>
    
   </PropertyGroup>
