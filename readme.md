@@ -1,12 +1,14 @@
-This is a fork of https://cloudbuild.visualstudio.com/CBT/_git/Template-VS2017-CloudBuild.
-We have to fork so that coral has a repo in this account to use to start onboarding.
+Idea here is to have a service which runs in kubernetes (azure aks) that 
 
-Differentces with cloudbuild version are.
-`commit 5f3838fd293fdaa2d260db7eb0c60807ec4f8eb9:
+1. takes the output of vsts build
+2. Downloads a particular directory or every sub directory with a dockerfile.
+3. Calls docker build and push to a connected azure repository.
 
-We set cache settings so quickbuikld will use local caching.
+This allows you to build containers for kubernetes/service fabric or aci without having to use an agent pool. 
+You can also dynamcailly create containers at release time rahter than for every build (though maybe that's what we want).
 
-`commit 495d2ce02dfdf672fd5c8a60d1c5543cc45284bc
-`commit 9917a3003a1a9ed0d81933df8f699a70bee5604d
-
-We have Have bootstrap scripts so that you know you actually have msbuild/nuget/cloudbuild on path and don't need to go into dev shell.
+Concerns:
+* Will this be really slow.
+* Do people just want the container as a build artifact?
+* Does not work for windows containers yet. (has to be on windows cluster).
+* Will the agent based tasks always be ahead of this? 
