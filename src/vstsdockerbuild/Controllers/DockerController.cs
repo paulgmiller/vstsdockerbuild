@@ -144,12 +144,8 @@ tion/json" -method post
             _log = logger;
         }
         public void Report(JSONMessage msg) {
-            try 
-            {
-                _log.LogInformation(JsonConvert.SerializeObject(msg));
-            }
-            catch (Exception e)
-            {}
+            //getting a serialization exception hen we do this.
+            //_log.LogInformation(JsonConvert.SerializeObject(msg));
         }
     }
   
