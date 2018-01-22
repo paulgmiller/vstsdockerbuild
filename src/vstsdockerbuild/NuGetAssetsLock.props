@@ -1,0 +1,1774 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <NuGetDeterministicPropsWasImported>true</NuGetDeterministicPropsWasImported>
+  </PropertyGroup>
+  <Import Project="Before.$(MSBuildThisFile)" Condition="Exists('Before.$(MSBuildThisFile)')" />
+  <ItemGroup>
+    <PackageReference Include="Docker.DotNet">
+      <Version>[3.125.0]</Version>
+      <Sha512>b2MVmHmZWoF31R3t1SVEyjOEQpkW2sv/iRQPI1/UPwrEC5NA2+5lPp4vWASERdaNRkEbTMjxGhY0Fit+yW2UIw==</Sha512>
+      <Path>docker.dotnet/3.125.0</Path>
+      <HashFile>docker.dotnet.3.125.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Libuv">
+      <Version>[1.10.0]</Version>
+      <Sha512>GsCf4q+eyaI49rCPlgYxdxa1SQCysXFFdSJWdstrwxytg4+VPYLYrXD4AT2rjHVJ+UF7SSWX9CapWEYaU4ejVQ==</Sha512>
+      <Path>libuv/1.10.0</Path>
+      <HashFile>libuv.1.10.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ApplicationInsights">
+      <Version>[2.4.0]</Version>
+      <Sha512>4dX/zu3Psz9oM3ErU64xfOHuSxOwMxN6q5RabSkeYbX42Yn6dR/kDToqjs+txCRjrfHUxyYjfeJHu+MbCfvAsg==</Sha512>
+      <Path>microsoft.applicationinsights/2.4.0</Path>
+      <HashFile>microsoft.applicationinsights.2.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore">
+      <Version>[2.1.1]</Version>
+      <Sha512>kiGmzl9Cav34dF7AHVMoJxdJJQEeLB8KZGNwX1LjImG9iem5hGk4DkHpW7/m9Nh3DrL8IKSL3mqQo+IPqWfMRQ==</Sha512>
+      <Path>microsoft.applicationinsights.aspnetcore/2.1.1</Path>
+      <HashFile>microsoft.applicationinsights.aspnetcore.2.1.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ApplicationInsights.DependencyCollector">
+      <Version>[2.4.1]</Version>
+      <Sha512>RWxdX90MY6tNF8S5lwRvJcHiBMIWwVLCxd4TGIEl3X0yAKaolY2vs4zTCvyCIVkEAMs1aInTgWkYwOjzYvAHWw==</Sha512>
+      <Path>microsoft.applicationinsights.dependencycollector/2.4.1</Path>
+      <HashFile>microsoft.applicationinsights.dependencycollector.2.4.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore">
+      <Version>[2.0.1]</Version>
+      <Sha512>12IBPqyTHIAEReaV/JhHsRImbpASKs4SokhHTl/yn5Q6+IHZQtCpOeEaPJrThVgjtnljReGqUlsnFXpx6IQK6g==</Sha512>
+      <Path>microsoft.aspnetcore/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.All">
+      <Version>[2.0.3]</Version>
+      <Sha512>tS/REciEJ7MjT7SZhle8JrfZ28va/D9g0OXmDrNKP9Nr7j3kkyLH7w6kesgmj0q6HmcWR+ltZbd4kU2rBiQZdQ==</Sha512>
+      <Path>microsoft.aspnetcore.all/2.0.3</Path>
+      <HashFile>microsoft.aspnetcore.all.2.0.3.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Antiforgery">
+      <Version>[2.0.1]</Version>
+      <Sha512>WJdyrhYlggFY5VfFCvrcfPjc5zp3TiwbldFeDZ0xhRESEnT0icus8rq86Qyc82gMb8YNtOBGkvOv6rfXSKhFwA==</Sha512>
+      <Path>microsoft.aspnetcore.antiforgery/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.antiforgery.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.ApplicationInsights.HostingStartup">
+      <Version>[2.0.1]</Version>
+      <Sha512>nf2/CJ5O27o0oLM9vaArF1SBqM9GLEH0YL+oTmHAnfOH7wyXb63wRPxly3zJNee5k53M47K7BPYrpZIDaP6IyA==</Sha512>
+      <Path>microsoft.aspnetcore.applicationinsights.hostingstartup/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.applicationinsights.hostingstartup.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication">
+      <Version>[2.0.1]</Version>
+      <Sha512>DD+8BB3eBB+l7oqloFZLKv+mrWvcHyhiW3qrqg0pC8Qv717rJZd3iKULgwEs8i0GBupn/Qn0BGK+ohy1OBevIw==</Sha512>
+      <Path>microsoft.aspnetcore.authentication/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.authentication.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Abstractions">
+      <Version>[2.0.1]</Version>
+      <Sha512>7PHMl0nVjaYCrypBSsS2MYZmmOm8UqJmkFRuGzfcEpkYKT/2TjEZ8z2F0QBkU7YOfDmeupanrD5vcnJvupdWJg==</Sha512>
+      <Path>microsoft.aspnetcore.authentication.abstractions/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.authentication.abstractions.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies">
+      <Version>[2.0.1]</Version>
+      <Sha512>4Wsh6hfTDK9bIiNN3PS3HrZKZkv33L07qq1FqY+hIS5pYSdf7lZVjJobjIQgTTIO16e4Z+5afRbzcVXogIriWA==</Sha512>
+      <Path>microsoft.aspnetcore.authentication.cookies/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.authentication.cookies.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Core">
+      <Version>[2.0.1]</Version>
+      <Sha512>iYr/rnoafq+pl9p4O+6GitU1iXh4FJYFsRt6oi1fcITWy7FHy5eA4N7T5ypNImsyY/MFTiIpH0g7XXUeDUVgww==</Sha512>
+      <Path>microsoft.aspnetcore.authentication.core/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.authentication.core.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook">
+      <Version>[2.0.1]</Version>
+      <Sha512>TPKzhxEb1KevANRtJ2ph5bM7/Y209iOnC25RUGA8OwtLHRw0A/K1tEebbbfRXOrDnOujEBkbhdcoChOK2YOHbQ==</Sha512>
+      <Path>microsoft.aspnetcore.authentication.facebook/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.authentication.facebook.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google">
+      <Version>[2.0.1]</Version>
+      <Sha512>VlvpEJLbLIcXtHFzV8WI4OaivKlQ9mjX+sxRv97QipRTnOLPVZEM64o1er4saxcaoatv0WhJpkC7M8OnL1trnA==</Sha512>
+      <Path>microsoft.aspnetcore.authentication.google/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.authentication.google.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer">
+      <Version>[2.0.1]</Version>
+      <Sha512>GH1qVsm6b0JqWnlhnVKRl6JOux6t52KhjHkMV3gjEcRe0Rg6mOPjQh/TrIZuxpktfgGp8j4DYBOaMn+jjOL1wA==</Sha512>
+      <Path>microsoft.aspnetcore.authentication.jwtbearer/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.authentication.jwtbearer.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.MicrosoftAccount">
+      <Version>[2.0.1]</Version>
+      <Sha512>vzyRuJpQs+/s0tP9Znql3DrEGP4pNJdh69oITu3gfkh0nTVUUD/KQsBQmHk9CF350HMjoBRyFkU/CbIu5kns+g==</Sha512>
+      <Path>microsoft.aspnetcore.authentication.microsoftaccount/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.authentication.microsoftaccount.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OAuth">
+      <Version>[2.0.1]</Version>
+      <Sha512>GpPv8ojFzn3LjD6Q6aCDE8Q382ug4D7fVwjnGyZwEESLNeg6r3w/zffAN18smjKznJuTTUcsZS4lYWDmbsFoGQ==</Sha512>
+      <Path>microsoft.aspnetcore.authentication.oauth/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.authentication.oauth.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect">
+      <Version>[2.0.1]</Version>
+      <Sha512>kN8wCKq1T4nV9V7G91eeHjD6d21x9nXVIcIDNXUyiN6AOZK1ow2qgaLJkUkwobFH+MU3QrU3U764OkwtknWZmQ==</Sha512>
+      <Path>microsoft.aspnetcore.authentication.openidconnect/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.authentication.openidconnect.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Twitter">
+      <Version>[2.0.1]</Version>
+      <Sha512>/xHqTp7vRmClyi+AC61ttAuB11Yc/Igul73vKDfe92WyfdDp6ZXe8LsiZDo32bYbDaQSmxZwcI1sLFNBvETtFw==</Sha512>
+      <Path>microsoft.aspnetcore.authentication.twitter/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.authentication.twitter.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authorization">
+      <Version>[2.0.1]</Version>
+      <Sha512>0nZ5slZMwvtEgoR5b/T/MB4uM5qPQqVhPxbtrWb9W0QsIktB0gkAmpD6ciNj4ltZ+zRaY3rWZSS09SaFrsUTIQ==</Sha512>
+      <Path>microsoft.aspnetcore.authorization/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.authorization.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Authorization.Policy">
+      <Version>[2.0.1]</Version>
+      <Sha512>AJEJjYkN3L9VyHuKnUsQNp4nbH2ABBePWi+5soA+9L1NHGexP5S1TnMksOef1I+4fiVhp8OhlG+Ensz56ucBcw==</Sha512>
+      <Path>microsoft.aspnetcore.authorization.policy/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.authorization.policy.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.AzureAppServices.HostingStartup">
+      <Version>[2.0.1]</Version>
+      <Sha512>hdneJMBdHdrlMc/NYaNS8GFWlR/3tN7TsV/jOSBuc61+gWULwu45t+I7g5IF/iCHWI9PLMLNP5VOj+d1Tv1zUA==</Sha512>
+      <Path>microsoft.aspnetcore.azureappservices.hostingstartup/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.azureappservices.hostingstartup.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.AzureAppServicesIntegration">
+      <Version>[2.0.1]</Version>
+      <Sha512>r2JMiK8RB2mHGKWIc+NVViT++2ZxCAGJBbLtptINB32F/c3DrNEtKWVNs2MEldEb822llBjrRmsJ7cScCW+P7g==</Sha512>
+      <Path>microsoft.aspnetcore.azureappservicesintegration/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.azureappservicesintegration.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.CookiePolicy">
+      <Version>[2.0.1]</Version>
+      <Sha512>KvwxvTU83usDK0amo5T4ElaixJ3wpIWUXAVrqvnJBQ1U+DXU4R0bRpMCMii/5emAqZPhi0aggYG5axkcV1kheQ==</Sha512>
+      <Path>microsoft.aspnetcore.cookiepolicy/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.cookiepolicy.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Cors">
+      <Version>[2.0.1]</Version>
+      <Sha512>9CkzhCVdqV4lYDuf6jNqjUfQQ0lbnxg1npGIu8Wl7G9xsghSERgfrj7ddCmzparqZ1igD16gcTY3KyjwZczXEQ==</Sha512>
+      <Path>microsoft.aspnetcore.cors/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.cors.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Cryptography.Internal">
+      <Version>[2.0.1]</Version>
+      <Sha512>zmERIuyMufMcEOf0nLM9ApgH4VHhUnFGzmrgp2mkFL5unXfzDFg7Itdq4PsKMjrBZScGt3ayN0ct7F5ttdZ1eA==</Sha512>
+      <Path>microsoft.aspnetcore.cryptography.internal/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.cryptography.internal.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Cryptography.KeyDerivation">
+      <Version>[2.0.1]</Version>
+      <Sha512>rLj4xn0dwWslmk2LSrLUNlJ8pGDspj8MQ6EyLQO+saGobnGXhJa+k92d6X0w2qhZddHhLebXurRFlyKOpdkWNQ==</Sha512>
+      <Path>microsoft.aspnetcore.cryptography.keyderivation/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.cryptography.keyderivation.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection">
+      <Version>[2.0.1]</Version>
+      <Sha512>wQbnO+4xEalM/80V27UqAoRe0Hxo13W2lNNnJ3816zwDv1404tiLwE7YLPM68b6H+QYOaqvQFGqKkj4FBrN4mw==</Sha512>
+      <Path>microsoft.aspnetcore.dataprotection/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.dataprotection.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection.Abstractions">
+      <Version>[2.0.1]</Version>
+      <Sha512>2sXEwqRIdQsbdfuGr0G5N0G+No2ormNyAkAudtVgoFzbjdf6zbCtbLK9skoNb4bg3/ZyE0qa1iOJELfEM4GUjA==</Sha512>
+      <Path>microsoft.aspnetcore.dataprotection.abstractions/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.dataprotection.abstractions.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection.AzureStorage">
+      <Version>[2.0.1]</Version>
+      <Sha512>ySkJwPJodnLvM10xkCzeAxEY79jtaZurdoznuuU5uH3ZfcjHHHOyW9/+Y0DGF+oiSjQ6FCGULnmE7bdwuIsIPw==</Sha512>
+      <Path>microsoft.aspnetcore.dataprotection.azurestorage/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.dataprotection.azurestorage.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection.Extensions">
+      <Version>[2.0.1]</Version>
+      <Sha512>rKkcV63GZG1+Rs5PZ6RNFV/SgbQacnVvKMcqpgey21zPos2pCM0HNffgju7RMbPTIIog6RAivoounbUkc+ZNEA==</Sha512>
+      <Path>microsoft.aspnetcore.dataprotection.extensions/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.dataprotection.extensions.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics">
+      <Version>[2.0.1]</Version>
+      <Sha512>aYyMlv17p647mv9f3BUQdFkwVvWQ2i3hkw6jCiUhMAflRpjEOxhu4PrC1mia++Z7ZdghIgdZNzJXpDH2XMq25Q==</Sha512>
+      <Path>microsoft.aspnetcore.diagnostics/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.diagnostics.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.Abstractions">
+      <Version>[2.0.1]</Version>
+      <Sha512>NHBnnQYuBxcqHNoOw0+uTkHrAHAp7xA2G3P1j3oFUSGd/RhIJ2A9xE2+CAWPRGIGwsa+zY3zfogx5lUzwhFgcA==</Sha512>
+      <Path>microsoft.aspnetcore.diagnostics.abstractions/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.diagnostics.abstractions.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore">
+      <Version>[2.0.1]</Version>
+      <Sha512>VZ563Qjbgg4vaEVwsVYL1Ez6h90X4QrPfMmhECt4Eh4e8BBMTUc84bLxwuciiZpNb0G2853Py5XL6dlrDlC4Ng==</Sha512>
+      <Path>microsoft.aspnetcore.diagnostics.entityframeworkcore/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.diagnostics.entityframeworkcore.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Hosting">
+      <Version>[2.0.1]</Version>
+      <Sha512>vqQK+SQybdYWmkDhjbvgde7riR6DIp/oD8Voj4zJiaAB1atvEm1ZjXVFj7sAXdy6NUZlUyeU7lTwYYzmkiFqWQ==</Sha512>
+      <Path>microsoft.aspnetcore.hosting/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.hosting.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions">
+      <Version>[2.0.1]</Version>
+      <Sha512>1/Pifm1al6wA12UkAGpro2vsF31oF8Zw2ZCi9PphxTFGreTsJbqPzd39YcTlw3Knb9n/8F9/lTZ3l1m2RjWGXg==</Sha512>
+      <Path>microsoft.aspnetcore.hosting.abstractions/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.hosting.abstractions.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Server.Abstractions">
+      <Version>[2.0.1]</Version>
+      <Sha512>uVOdxjpxJdwR5C3RdByht/cm9FwyqeTEm58NnPwOxMAUPE9nqbXdVnq1Hff2VjtSlvVtPVT0NiJjHM6pDkEeKA==</Sha512>
+      <Path>microsoft.aspnetcore.hosting.server.abstractions/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.hosting.server.abstractions.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Html.Abstractions">
+      <Version>[2.0.0]</Version>
+      <Sha512>Tdy0VkAnSeynmnbqF1JLchyPg5iQwmxTTG16byenoD2SXn/W8DR6HagZOZxvDb7gc4IerjdhIwuY8aV8nm7FAA==</Sha512>
+      <Path>microsoft.aspnetcore.html.abstractions/2.0.0</Path>
+      <HashFile>microsoft.aspnetcore.html.abstractions.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Http">
+      <Version>[2.0.1]</Version>
+      <Sha512>mTXDCNF83pV6qe+IzJ166p1re2or25Xj0vjdqj5JDakz9ClNZHncSkyAk63vSpBZbgFXGHiz+PuVyYcfurs5ew==</Sha512>
+      <Path>microsoft.aspnetcore.http/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.http.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions">
+      <Version>[2.0.1]</Version>
+      <Sha512>i3mGpHEGnMq/x9eDxdWVP4e+VdPD8DuhdVYR4sH0wxWiM6oa0tNAhwDGoOrDop548PSwLM8Qs7DGPvrZqIqjmQ==</Sha512>
+      <Path>microsoft.aspnetcore.http.abstractions/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.http.abstractions.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions">
+      <Version>[2.0.1]</Version>
+      <Sha512>iG6FtbPQI3AOb3LskrY23AUiaZUGSfXWxMf1cJh9lB/h309qiMTPM6Du4stGwwSvw3yR2EKNaV+O4aZWmuvfog==</Sha512>
+      <Path>microsoft.aspnetcore.http.extensions/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.http.extensions.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features">
+      <Version>[2.0.1]</Version>
+      <Sha512>J9JvFF7gC2SDJTV/4XWXQaKX4zdjR2ixlGy/KUD7Og+dkeHleD7f8+wtRUthuQV1yCU3t/gz/IrmbpmQj+Tlzg==</Sha512>
+      <Path>microsoft.aspnetcore.http.features/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.http.features.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.HttpOverrides">
+      <Version>[2.0.1]</Version>
+      <Sha512>/F/IL5tkwF58n/CyLDsXzyhpOM0L23GWQVf1QtAyku1GVVralKVK1Y+/6SNar0btoSyqgQt83tmwdyrUNUHwjw==</Sha512>
+      <Path>microsoft.aspnetcore.httpoverrides/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.httpoverrides.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Identity">
+      <Version>[2.0.1]</Version>
+      <Sha512>dJzQ3AhwEWFYbWNSigHc/RutA+P8xiW6eh4KnLmQaxjikRfSVfRLf4Da4tOByD6ddJsaBqfstWJnd3KBDKzJAw==</Sha512>
+      <Path>microsoft.aspnetcore.identity/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.identity.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore">
+      <Version>[2.0.1]</Version>
+      <Sha512>H59BaisdTVX/feI2MJ+V5wrb4P0wSxBLk10HyPrXVze8YAcpi5kGyissuRhbPzMztPyPGuiq+M+i/Wl4sk3uyA==</Sha512>
+      <Path>microsoft.aspnetcore.identity.entityframeworkcore/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.identity.entityframeworkcore.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch">
+      <Version>[2.0.0]</Version>
+      <Sha512>US78cfi7nrPTXeONgcSWbgrUBLs1Aca4kCJTieWXDLg0G0gwmdfPbd6S3c5TdJRQdA69K3UhPAs9r9ZAMjIFAA==</Sha512>
+      <Path>microsoft.aspnetcore.jsonpatch/2.0.0</Path>
+      <HashFile>microsoft.aspnetcore.jsonpatch.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Localization">
+      <Version>[2.0.1]</Version>
+      <Sha512>c2u/AU2CscYYmH1nMbkYyJp5Zy2elVuZYryEEV+M0cL/aKGFfDRnQ5iTGoa4HPNELjpqhFWTGwIneeUlpJWUDg==</Sha512>
+      <Path>microsoft.aspnetcore.localization/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.localization.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Localization.Routing">
+      <Version>[2.0.1]</Version>
+      <Sha512>Ve5jN3Y56924iVPrd7vKeZA9vRM7aD51Md2bLLH3rrpkRdJ4nhIQNPIscqFEiRg3X41PLKj1Owdjws7ya73mmA==</Sha512>
+      <Path>microsoft.aspnetcore.localization.routing/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.localization.routing.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.MiddlewareAnalysis">
+      <Version>[2.0.1]</Version>
+      <Sha512>wUs8H0rhiAHjSp20W+mynHiGEIvqhOCSPOsabOA/Qx5/EiGFKVJjfb3F0m8CJX837SCoJOZGn1NPraEiaddatA==</Sha512>
+      <Path>microsoft.aspnetcore.middlewareanalysis/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.middlewareanalysis.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc">
+      <Version>[2.0.1]</Version>
+      <Sha512>NyREVR8T77lyf5pn6FqMZky7qG/dLTbSas1EO3Cy+zLDsKhD6OrtgDJtzMDfRIfBysCoFo4bFcC38MTzKEdmtA==</Sha512>
+      <Path>microsoft.aspnetcore.mvc/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.mvc.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions">
+      <Version>[2.0.1]</Version>
+      <Sha512>lmtZdHN/dHREWo9rGoxY646wUhdr1Wt9rXl8SYYPjA80VcGDKqgSwvb0SOt9f/7fYzOHPZGZuDPCf9lED2stsA==</Sha512>
+      <Path>microsoft.aspnetcore.mvc.abstractions/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.mvc.abstractions.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ApiExplorer">
+      <Version>[2.0.1]</Version>
+      <Sha512>WaY906DkCyG7C/BZBLecVxNGTsXADxiv0cyaK9newWOGkIfQ0rp4UvLIijed8Tb2eJsfT99iLUBj5GvBWLxRwA==</Sha512>
+      <Path>microsoft.aspnetcore.mvc.apiexplorer/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.mvc.apiexplorer.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core">
+      <Version>[2.0.1]</Version>
+      <Sha512>JFd2hCLx5wdbIVtURpGUq1dNcuhGW7RaoTwVghI5QxwZU3Dh65ymgdaoKVhB8OS20DhZaNwVPXYHfVlViMbnDw==</Sha512>
+      <Path>microsoft.aspnetcore.mvc.core/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.mvc.core.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Cors">
+      <Version>[2.0.1]</Version>
+      <Sha512>eL/FDFflChBeKLiWCDj/Cui5LUpT7bDOmjcOh5zis6bVZUmX343jpuLebItWOkONTrodngeUToJ3xTVQhSDtVQ==</Sha512>
+      <Path>microsoft.aspnetcore.mvc.cors/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.mvc.cors.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.DataAnnotations">
+      <Version>[2.0.1]</Version>
+      <Sha512>7Dyl9bwmSbKkGGH9gS9u12xPmn8awkYhX8tDk2dSkSgza6gSm1cWjHG2BGIg4Lw6GD9MNr6xTTYfO1DJflPYYQ==</Sha512>
+      <Path>microsoft.aspnetcore.mvc.dataannotations/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.mvc.dataannotations.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Formatters.Json">
+      <Version>[2.0.1]</Version>
+      <Sha512>OZDI91AhXZfpY9YqVMoklGdK20OfB5D7wZISv3LegLL6W6u81XMY6tOlfjkZaXVm/BSX8Cg7BzeFr37reyE6/w==</Sha512>
+      <Path>microsoft.aspnetcore.mvc.formatters.json/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.mvc.formatters.json.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Formatters.Xml">
+      <Version>[2.0.1]</Version>
+      <Sha512>OoNOSIB0DEPcHtkQSg6X/p08RmFgT3VHwPtHewMa/HmVP1oPNdmLQCRz3hN5fsXGrOyO5WFa24DNDKyuvH41OA==</Sha512>
+      <Path>microsoft.aspnetcore.mvc.formatters.xml/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.mvc.formatters.xml.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Localization">
+      <Version>[2.0.1]</Version>
+      <Sha512>sZppxMkA1ARIUuCX3AYMslZsUScxHDNheVoVJtcW2E0HJfqAPNPg1BNTG2kH/OeDnQy/ldlHeOkFE645liDFVA==</Sha512>
+      <Path>microsoft.aspnetcore.mvc.localization/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.mvc.localization.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor">
+      <Version>[2.0.1]</Version>
+      <Sha512>Z03KbgHYWaVd5+c/nO3ncPCSc165momK+xldJus15h+cJiVl5hzb5nFRNdA2vF4JjvcH3hW/DyC8oEtFofVAlw==</Sha512>
+      <Path>microsoft.aspnetcore.mvc.razor/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.mvc.razor.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.Extensions">
+      <Version>[2.0.1]</Version>
+      <Sha512>voxpNz4zq9RxOPnK5oYchyA1ggNVpnz34mFsqwH7G9RUJHFLhjlRaeaKXi8gGwWU3RomGF9ahhH9o8DHgdxmPA==</Sha512>
+      <Path>microsoft.aspnetcore.mvc.razor.extensions/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.mvc.razor.extensions.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.ViewCompilation">
+      <Version>[2.0.1]</Version>
+      <Sha512>qrX7oypFE69MqlYQdFY8f5x2pTM+y0GZa1u/R7qdz/7C4qWqzPAG8Tsuy7CPFych8lbI8+rJx1fBfxrNr22oBA==</Sha512>
+      <Path>microsoft.aspnetcore.mvc.razor.viewcompilation/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.mvc.razor.viewcompilation.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.RazorPages">
+      <Version>[2.0.1]</Version>
+      <Sha512>lfRWvvJ63LdOPGt7wx+I9LvUr94ADoiJj8bMXdN3SNgYr+7yolsK6llqLG7UD9vFJC2/kSs/5uWUgGTI9JXxkA==</Sha512>
+      <Path>microsoft.aspnetcore.mvc.razorpages/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.mvc.razorpages.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers">
+      <Version>[2.0.1]</Version>
+      <Sha512>nuBEw70GCe9Lr8bGgWnsZhdmyI6awR6H6I8ECgYjXejcRlrBcgVEriRLtu1mrGHMkdW0wWh7z9CFePihUlSfOg==</Sha512>
+      <Path>microsoft.aspnetcore.mvc.taghelpers/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.mvc.taghelpers.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures">
+      <Version>[2.0.1]</Version>
+      <Sha512>8FDzO3Uur7cVlvazOauQJcnLnbShUEt1XRvWKKZJCttLf5xtoLNVJGIg4hjrxkwEGsCZdlf60gVT4ya1UN5Ibw==</Sha512>
+      <Path>microsoft.aspnetcore.mvc.viewfeatures/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.mvc.viewfeatures.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.NodeServices">
+      <Version>[2.0.1]</Version>
+      <Sha512>nqQBEJ2N1CLNOi/cVZf2n535AbLLJhKTEi4u3Om12PQayoEzfcQIU2woLOI32QN93tL5B6HutaqEpx6T5t04Lw==</Sha512>
+      <Path>microsoft.aspnetcore.nodeservices/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.nodeservices.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Owin">
+      <Version>[2.0.1]</Version>
+      <Sha512>K54YgOdNwVQbjXg/EPucK20oRCSdJ5gS2wQsN1Twk434yLTTzaSYaipYZ3oFwHgClEdxVQvlHcDiKXii2NtJwg==</Sha512>
+      <Path>microsoft.aspnetcore.owin/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.owin.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Razor">
+      <Version>[2.0.1]</Version>
+      <Sha512>IGtreZEfTOSKndAZcAaMEGwTa7rLnuqSRbCS3l3Mn2D68Ba9c4enuVOMACivDowMAsfAUqZju3vhiuCUAMvGHg==</Sha512>
+      <Path>microsoft.aspnetcore.razor/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.razor.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Language">
+      <Version>[2.0.1]</Version>
+      <Sha512>zzvx4EnZoOf/1rKUcn5lEY98GOt30KJiQGS3tVhc2HihBubcvMZZT6+oqNiFi7oJoM5bnYaEUNM8C7kA8Iu8RQ==</Sha512>
+      <Path>microsoft.aspnetcore.razor.language/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.razor.language.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime">
+      <Version>[2.0.1]</Version>
+      <Sha512>CMxOywYKmMe7knPXXaKSTvsPRtM88PHieFCf74KjWnbq7Oz9d5TuNwlQuC+V+Y65tBUpGicfTDM9IfG8engyzQ==</Sha512>
+      <Path>microsoft.aspnetcore.razor.runtime/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.razor.runtime.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.ResponseCaching">
+      <Version>[2.0.1]</Version>
+      <Sha512>DME1X7TXwMLlq+i/rZ7r8TkifCMSUGahoJ7/hkulHkqlgoQJ/lYLGTBlEQy2ndWX1oc1DUJEWVlWeoptlv/A9A==</Sha512>
+      <Path>microsoft.aspnetcore.responsecaching/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.responsecaching.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.ResponseCaching.Abstractions">
+      <Version>[2.0.1]</Version>
+      <Sha512>ZIwA+KjQRd1bF5MlNA3HhvpZR4e0SMqQHyMlaTXArmTXwS86AoOR22v3xvJXrjIbyEPUC+WHeKBNa+AbReMf3w==</Sha512>
+      <Path>microsoft.aspnetcore.responsecaching.abstractions/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.responsecaching.abstractions.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.ResponseCompression">
+      <Version>[2.0.1]</Version>
+      <Sha512>TBjky9V/d+/Bkmhmb4QEZ4jMF/MQzLBViEYMvD2/uWl73cnjvhKauIm8PjIFZqQsWBHNliHPgNWxcChY5+TsjQ==</Sha512>
+      <Path>microsoft.aspnetcore.responsecompression/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.responsecompression.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Rewrite">
+      <Version>[2.0.1]</Version>
+      <Sha512>oYyeTr6s2iTSMbriJt3eOLfdzDaiIVtP5ECFGUZx20hGF6elBabq2rhR9sAoc4vQNwBCirT03ndcCK7VZtAUVw==</Sha512>
+      <Path>microsoft.aspnetcore.rewrite/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.rewrite.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Routing">
+      <Version>[2.0.1]</Version>
+      <Sha512>jfvgBuVu4qbNALj+EQJzGFz5aP/pqBdPowif1Oyube2EkmrIx1JDmCQ+LeLUygflLYdV2gYffPEeB7ifYegz0g==</Sha512>
+      <Path>microsoft.aspnetcore.routing/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.routing.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Routing.Abstractions">
+      <Version>[2.0.1]</Version>
+      <Sha512>ZJJj11f1oClXp11KAoT2p2I/6rUrPtnKoXQBwnCa3NhpI0/WfsyXo4MvJJB87H1GWCCHNFYylAoxhhie25pC7Q==</Sha512>
+      <Path>microsoft.aspnetcore.routing.abstractions/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.routing.abstractions.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Server.HttpSys">
+      <Version>[2.0.1]</Version>
+      <Sha512>pbD9OCmnr/TKJdWo0uUEr2njtY41ZzpymvK3Su+07WeHmno1p2kiSPb200U9IQ5BuVxaYjShs4cExxCJc0jx1A==</Sha512>
+      <Path>microsoft.aspnetcore.server.httpsys/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.server.httpsys.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Server.IISIntegration">
+      <Version>[2.0.1]</Version>
+      <Sha512>bagPgHYvSqF91M7SZv4qZ8hZZqdej3R4aclPOFNzroLxlFgbAAXwbApRbDG/1ZTCYtXFQ83QCHwUXgZ5hmmMcg==</Sha512>
+      <Path>microsoft.aspnetcore.server.iisintegration/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.server.iisintegration.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel">
+      <Version>[2.0.1]</Version>
+      <Sha512>SX7+2E6npBQ7vO5xn8dAo1vnWnjBE3t9b+tEsLNL7ewjQTJE85TkJ9cyjIorOtOn+duUxshmgzbMzhpf7uUn3Q==</Sha512>
+      <Path>microsoft.aspnetcore.server.kestrel/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.server.kestrel.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel.Core">
+      <Version>[2.0.1]</Version>
+      <Sha512>xTteJ7Wfh9QLoeMOIsG5TjQf4eHaUvC12kinmvxZ2kzm5r1UtyC1f+07N8dxY3Co1RquvlXO4b3EuNJMamc1Pg==</Sha512>
+      <Path>microsoft.aspnetcore.server.kestrel.core/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.server.kestrel.core.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel.Https">
+      <Version>[2.0.1]</Version>
+      <Sha512>L8C0q6HHMs6Bu17QCLXwGUNlsGTOrz7d0b5gaEqIMYO94zsg+gAmv7YHYK43mGJ4dteXxWxBdoUI8WRKY+H0zg==</Sha512>
+      <Path>microsoft.aspnetcore.server.kestrel.https/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.server.kestrel.https.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions">
+      <Version>[2.0.1]</Version>
+      <Sha512>I0X3ZmWFv4TeH6q/FO5Pv5GsT1X0TffclbZzs/Pf69TGznVIqlfSsSambWT8tGNUx8Y1EC5ffXvvoNhN0ci0rQ==</Sha512>
+      <Path>microsoft.aspnetcore.server.kestrel.transport.abstractions/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.server.kestrel.transport.abstractions.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel.Transport.Libuv">
+      <Version>[2.0.1]</Version>
+      <Sha512>4GT9cQfP5arzReMTzxrbZyveHAQFbjIUaBN2xip4jwNn3rAhRKSty/6UhwrLDZ9+BSfSvb3qOjBklJPWeYFLOA==</Sha512>
+      <Path>microsoft.aspnetcore.server.kestrel.transport.libuv/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.server.kestrel.transport.libuv.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Session">
+      <Version>[2.0.1]</Version>
+      <Sha512>ERowmL/UQUJ5mzbEQrQcLXqSgRAN3A78SLweI1lB6ce4suQ8+dtgi9qm56mePrVLnRhdN10XTrcAkZZIje7PAA==</Sha512>
+      <Path>microsoft.aspnetcore.session/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.session.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices">
+      <Version>[2.0.1]</Version>
+      <Sha512>xEqorDmOsi7XXDRMR0d301t1byXTha1V8nl60o4VanqUhrtIi/6ZoHpJhOPqvmGlMZu6UTia0LPDQH4DFcoP3A==</Sha512>
+      <Path>microsoft.aspnetcore.spaservices/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.spaservices.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles">
+      <Version>[2.0.1]</Version>
+      <Sha512>F5qVFsyKsVWKS2tgnJ8MVXkc4FNt6NMybRl7gsZw90G7rhscu4M9k2rW0sEtaUS2ZyKu0ObMU2BVu8OjPCUZjQ==</Sha512>
+      <Path>microsoft.aspnetcore.staticfiles/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.staticfiles.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.WebSockets">
+      <Version>[2.0.1]</Version>
+      <Sha512>J7JAWvl/q/eUm0JsJZ/FdzU6WS08L8ErVCsDiL+kYz4hLcutR84qkpi7cxbPYT0LEE8bhUWYPNCUOJ1rFSlcBQ==</Sha512>
+      <Path>microsoft.aspnetcore.websockets/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.websockets.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities">
+      <Version>[2.0.1]</Version>
+      <Sha512>shzRZs574ir2Im5hJBSKnLlNbf8SKA2d5Mkcto5fv6LUcYqu0ravmVHfuRAqnAeo2Z0GpcpFW2DKmNbFjvzWRg==</Sha512>
+      <Path>microsoft.aspnetcore.webutilities/2.0.1</Path>
+      <HashFile>microsoft.aspnetcore.webutilities.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Azure.KeyVault">
+      <Version>[2.3.2]</Version>
+      <Sha512>A82ESUdfLz2wMhYuPxrwf/fA7JVt3IARgeMCG3TsaLtxUxa9RBKX3f0zdnKmvBvJ/u1/5g03OLR26GPekqY5HQ==</Sha512>
+      <Path>microsoft.azure.keyvault/2.3.2</Path>
+      <HashFile>microsoft.azure.keyvault.2.3.2.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Azure.KeyVault.WebKey">
+      <Version>[2.0.7]</Version>
+      <Sha512>MVSYao62R9rwl9KF+IsJm+XBLupJj1ma2lfwNeFlSWziXGAopnYK+YkDWqABOqNIV9kpza/MvNBxITzhlJIyIw==</Sha512>
+      <Path>microsoft.azure.keyvault.webkey/2.0.7</Path>
+      <HashFile>microsoft.azure.keyvault.webkey.2.0.7.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers">
+      <Version>[1.1.0]</Version>
+      <Sha512>g5XXuUg4T6oe2XVQUqon1WmlG490WvSHSS1BbxoC7/L0CMdVjYVyr/BNwiTAvt8Qby6X5/SqAOiHF8sdhdebxA==</Sha512>
+      <Path>microsoft.codeanalysis.analyzers/1.1.0</Path>
+      <HashFile>Microsoft.CodeAnalysis.Analyzers.1.1.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.Common">
+      <Version>[2.3.1]</Version>
+      <Sha512>nGATpUW09zOGFLQZ3JXIObJyNlk2dvgNgC7Kh+iDpxGWgKHSgpHMXnGmXUecJa4CNi0HhUENKSnEack1aF/MwQ==</Sha512>
+      <Path>microsoft.codeanalysis.common/2.3.1</Path>
+      <HashFile>microsoft.codeanalysis.common.2.3.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp">
+      <Version>[2.3.1]</Version>
+      <Sha512>fvO7Q8FqzmWX8gzzCk4Bf34Ms06bZ6r/A9tUz1ndj3ioitAxSC2QUXbUQOJ4ExzohTtXhczJAFirgs//Nasz6A==</Sha512>
+      <Path>microsoft.codeanalysis.csharp/2.3.1</Path>
+      <HashFile>microsoft.codeanalysis.csharp.2.3.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeAnalysis.Razor">
+      <Version>[2.0.1]</Version>
+      <Sha512>Ncqt6UEh5s451dZHPwTK8YDbl5t4isn0q1Xs3I2JTjUs4xdCOSo2t0KPeb1PUeNDrTJ0vKDV6xMtQf1uqiTjoQ==</Sha512>
+      <Path>microsoft.codeanalysis.razor/2.0.1</Path>
+      <HashFile>microsoft.codeanalysis.razor.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CSharp">
+      <Version>[4.4.0]</Version>
+      <Sha512>vvVR/B08YVghQ4jHEloxqw2ZWzEGE1AOA5E0DioUM3ujbXz6FD3AfB/0Jl2ohJPd0nXYGwmPe1En6HTsSriq1A==</Sha512>
+      <Path>microsoft.csharp/4.4.0</Path>
+      <HashFile>microsoft.csharp.4.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Data.Edm">
+      <Version>[5.8.2]</Version>
+      <Sha512>P/d8DxA6MFHroBEn/jW0LMQSIKnsRRibrZtRCLfov2boQfrQ1R1BVgkJ5oIhcQsOm0l4POv+I2ny6RBsclNbOw==</Sha512>
+      <Path>microsoft.data.edm/5.8.2</Path>
+      <HashFile>Microsoft.Data.Edm.5.8.2.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Data.OData">
+      <Version>[5.8.2]</Version>
+      <Sha512>oEIUtXcRiKogF0yZxA+QdgxoBJ34989qL/5xOSrTfxAhzNJV5Hw6DRdWgUCpeXFMoJUQx7ptbHCN+My/LCQfsg==</Sha512>
+      <Path>microsoft.data.odata/5.8.2</Path>
+      <HashFile>Microsoft.Data.OData.5.8.2.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Data.Sqlite">
+      <Version>[2.0.0]</Version>
+      <Sha512>9zw3cOfLaPkskrXRik3XxVhHbjUc3lkS68pExvZ/kBRXKo5g2kH+SDyLYyJoxii4ENXaaPL0U/juGmA030lIRg==</Sha512>
+      <Path>microsoft.data.sqlite/2.0.0</Path>
+      <HashFile>microsoft.data.sqlite.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Data.Sqlite.Core">
+      <Version>[2.0.0]</Version>
+      <Sha512>PBA2ay1gc4mMzLuBU4VfpZ2mjQOMaqCzwmwj+15FWNC33tFuOS6pSfH7MlV/Ql8wRKXBi/7yH6PqK9jm8JkvfA==</Sha512>
+      <Path>microsoft.data.sqlite.core/2.0.0</Path>
+      <HashFile>microsoft.data.sqlite.core.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.DotNet.PlatformAbstractions">
+      <Version>[2.0.3]</Version>
+      <Sha512>cXgVdJmW3fLwmSxsv0RlTe4BIKs6slVXV5xRvsO4CV4aUeY67GelaujxY/lP5yVlaMjMM22pXKbKtUY9x050Mw==</Sha512>
+      <Path>microsoft.dotnet.platformabstractions/2.0.3</Path>
+      <HashFile>microsoft.dotnet.platformabstractions.2.0.3.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore">
+      <Version>[2.0.1]</Version>
+      <Sha512>RlwInZHfIUWwFgQJCpUMKrLeE8QJ64MA/GxD881oTMFa9j7iiGKCtI0xK4J1NNgRKvgVDPJbh9CIGJiu0KEdeA==</Sha512>
+      <Path>microsoft.entityframeworkcore/2.0.1</Path>
+      <HashFile>microsoft.entityframeworkcore.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+      <Version>[2.0.1]</Version>
+      <Sha512>gEdT/YSI/buO15X/UN+gQY6D7qeozRYU80WuesZCj33jJBw4wCHHn8SYcp38k2BPOBDC4I2AfsOFH6Vaf8CeLQ==</Sha512>
+      <Path>microsoft.entityframeworkcore.design/2.0.1</Path>
+      <HashFile>microsoft.entityframeworkcore.design.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory">
+      <Version>[2.0.1]</Version>
+      <Sha512>PIkjqb3gqli8d86OX2HeQpPv5vGXareCuf2IBrVf1+GoIyveZlwLSmsRtqgR3yXPbdeDZzqjCq4X/BDocvYrPg==</Sha512>
+      <Path>microsoft.entityframeworkcore.inmemory/2.0.1</Path>
+      <HashFile>microsoft.entityframeworkcore.inmemory.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational">
+      <Version>[2.0.1]</Version>
+      <Sha512>aZgfEDEzub+n9Kmsz/l4iiUHfB+R2iDDAFtW55OLpT7ANj7mS8k/bq8mqd60rVPgWKKy1l0+BK26ao4el/07lA==</Sha512>
+      <Path>microsoft.entityframeworkcore.relational/2.0.1</Path>
+      <HashFile>microsoft.entityframeworkcore.relational.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite">
+      <Version>[2.0.1]</Version>
+      <Sha512>DviCFjsYHkLHQMRKUFEG/rx65NbaP0NGFskBnw1t9lPdkkLG8KoAzxOs4KvTHnuykPHs6V7qR9f703dH6WCwkQ==</Sha512>
+      <Path>microsoft.entityframeworkcore.sqlite/2.0.1</Path>
+      <HashFile>microsoft.entityframeworkcore.sqlite.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core">
+      <Version>[2.0.1]</Version>
+      <Sha512>TOmLflU7sD3QLLRgPPPadUsouAG2XSKxgpIPnLKIr1GoAYwl7t80HtYMd6402Mkg3MuN3fz1s3lXZLeNj6wfpg==</Sha512>
+      <Path>microsoft.entityframeworkcore.sqlite.core/2.0.1</Path>
+      <HashFile>microsoft.entityframeworkcore.sqlite.core.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer">
+      <Version>[2.0.1]</Version>
+      <Sha512>+UnKJpkVpuNWRjF3BWSzbkQLL7gxY18Hnh5uXmlagO4Ua8BstqWIJaIUV+Ps2rw/2n62UPTQQV9RQWggV7OH9Q==</Sha512>
+      <Path>microsoft.entityframeworkcore.sqlserver/2.0.1</Path>
+      <HashFile>microsoft.entityframeworkcore.sqlserver.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
+      <Version>[2.0.1]</Version>
+      <Sha512>/z1xawAD0oL5AyFd3vn9E7L6mE2UfEU91KwMDWEp8o0+AOrP4ZocJS5Kot5VYJMfDUeAzDBBZPmJs+r6/YUEiA==</Sha512>
+      <Path>microsoft.entityframeworkcore.tools/2.0.1</Path>
+      <HashFile>microsoft.entityframeworkcore.tools.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions">
+      <Version>[2.0.0]</Version>
+      <Sha512>kGMEV53Od1ES0BDh7OOKbTW9Zu5dbbQ72yI936dvvbHlde3puuq/WRKAccFgcB2PuRjox1HFhA9+t53RYqfuEA==</Sha512>
+      <Path>microsoft.extensions.caching.abstractions/2.0.0</Path>
+      <HashFile>microsoft.extensions.caching.abstractions.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory">
+      <Version>[2.0.0]</Version>
+      <Sha512>NqvVdYLbX7N2J2Wz9y3zjhE66JRdROiZZsGhA2u4a9IcIq/jzINC/cLM96BHA+TSOZFPxVdWneqB6/yt9u846A==</Sha512>
+      <Path>microsoft.extensions.caching.memory/2.0.0</Path>
+      <HashFile>microsoft.extensions.caching.memory.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Caching.Redis">
+      <Version>[2.0.0]</Version>
+      <Sha512>FWKu406Tb/muSY6y9Zy9G2IwKOkN/8gsLhz/iUUyovY6t/6iK+IOza5enKPv7KgaY1kgSuxPD22tWlXLV5GmIQ==</Sha512>
+      <Path>microsoft.extensions.caching.redis/2.0.0</Path>
+      <HashFile>microsoft.extensions.caching.redis.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Caching.SqlServer">
+      <Version>[2.0.0]</Version>
+      <Sha512>ZPZZHu3LC43wNKvfjp/lDu5Qn1T/iLlOeEJcKoeafBQnMbGph8BR639o5XX/V1D5wMkK7RjQF5iosu9RMf9mmw==</Sha512>
+      <Path>microsoft.extensions.caching.sqlserver/2.0.0</Path>
+      <HashFile>microsoft.extensions.caching.sqlserver.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration">
+      <Version>[2.0.0]</Version>
+      <Sha512>SsI4RqI8EH00+cYO96tbftlh87sNUv1eeyuBU1XZdQkG0RrHAOjWgl7P0FoLeTSMXJpOnfweeOWj2d1/5H3FxA==</Sha512>
+      <Path>microsoft.extensions.configuration/2.0.0</Path>
+      <HashFile>microsoft.extensions.configuration.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions">
+      <Version>[2.0.0]</Version>
+      <Sha512>rHFrXqMIvQNq51H8RYTO4IWmDOYh8NUzyqGlh0xHWTP6XYnKk7Ryinys2uDs+Vu88b3AMlM3gBBSs78m6OQpYQ==</Sha512>
+      <Path>microsoft.extensions.configuration.abstractions/2.0.0</Path>
+      <HashFile>microsoft.extensions.configuration.abstractions.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.AzureKeyVault">
+      <Version>[2.0.0]</Version>
+      <Sha512>HjuOFvIz9xtzfg9AddX9pjFvghpYKxDwUleLfPORT5Pm7YO1RTq2uN9uc1TxhMglDabkpSuwlfWG1BN64fOHQQ==</Sha512>
+      <Path>microsoft.extensions.configuration.azurekeyvault/2.0.0</Path>
+      <HashFile>microsoft.extensions.configuration.azurekeyvault.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder">
+      <Version>[2.0.0]</Version>
+      <Sha512>IznHHzGUtrdpuQqIUdmzF6TYPcsYHONhHh3o9dGp39sX/9Zfmt476UnhvU0UhXgJnXXAikt/MpN6AuSLCCMdEQ==</Sha512>
+      <Path>microsoft.extensions.configuration.binder/2.0.0</Path>
+      <HashFile>microsoft.extensions.configuration.binder.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine">
+      <Version>[2.0.0]</Version>
+      <Sha512>Vf2YKZFLx0lZjgGLhliYyhXzZOkpgrcF5RhpgjPsvdbxJ97jD/kPNXP0wmYnaF3IPzP/ro6z2zph6QzUophrkA==</Sha512>
+      <Path>microsoft.extensions.configuration.commandline/2.0.0</Path>
+      <HashFile>microsoft.extensions.configuration.commandline.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables">
+      <Version>[2.0.0]</Version>
+      <Sha512>islcwe05LWFtAxGaJxoDbl4pj2nmG8nuW6dqYMZkPWIuHK7/46YELCbL+3Frl6X89qzDh5sj2PHgyWXTOAmwdA==</Sha512>
+      <Path>microsoft.extensions.configuration.environmentvariables/2.0.0</Path>
+      <HashFile>microsoft.extensions.configuration.environmentvariables.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions">
+      <Version>[2.0.0]</Version>
+      <Sha512>ebFbu+vsz4rzeAICWavk9a0FutWVs7aNZap5k/IVxVhu2CnnhOp/H/gNtpzplrqjYDaNYdmv9a/DoUvH2ynVEQ==</Sha512>
+      <Path>microsoft.extensions.configuration.fileextensions/2.0.0</Path>
+      <HashFile>microsoft.extensions.configuration.fileextensions.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Ini">
+      <Version>[2.0.0]</Version>
+      <Sha512>9nYhMNBO9zASwLrAR1xosrnf4SamRI2TQwXHn+DOZ5PpjzGtu7XNQ0PMmGZ6WjFbD/6iIQfbuxzd7tM7+Ziz2A==</Sha512>
+      <Path>microsoft.extensions.configuration.ini/2.0.0</Path>
+      <HashFile>microsoft.extensions.configuration.ini.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json">
+      <Version>[2.0.0]</Version>
+      <Sha512>thPz4SckRGNqeLbdvJ619YxRFSkWuL1K5QqTMb3TVdEwjQj4O39yfUtjtI/XlWJiY7JKK4MUKAiQZVYc8ohKKg==</Sha512>
+      <Path>microsoft.extensions.configuration.json/2.0.0</Path>
+      <HashFile>microsoft.extensions.configuration.json.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets">
+      <Version>[2.0.0]</Version>
+      <Sha512>Nn9Gd4MsMKAzIwXhoz/pzPlngbgZDPlbWKWLSyL4nMFAnlQ8EubbealF69JvGBcK7DwdsMV5pz7a9EZFZQF6ww==</Sha512>
+      <Path>microsoft.extensions.configuration.usersecrets/2.0.0</Path>
+      <HashFile>microsoft.extensions.configuration.usersecrets.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Xml">
+      <Version>[2.0.0]</Version>
+      <Sha512>MxH2kk0846Og65bDiOoi+5u9GcnUF55qCBj2wo1r3rQcea53rFhHiGNEQyDaKFbsis8lPP8kq3Zaol1ZsZI4XQ==</Sha512>
+      <Path>microsoft.extensions.configuration.xml/2.0.0</Path>
+      <HashFile>microsoft.extensions.configuration.xml.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection">
+      <Version>[2.0.0]</Version>
+      <Sha512>wakg18gHYiUL1pcjjyZuYk6OvDpbSw1E7IWxm78TMepsr+gQ8W0tWzuRm0q/9RFblngwPwo15rrgZSUV51W5Iw==</Sha512>
+      <Path>microsoft.extensions.dependencyinjection/2.0.0</Path>
+      <HashFile>microsoft.extensions.dependencyinjection.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <Version>[2.0.0]</Version>
+      <Sha512>eUdJ0Q/GfVyUJc0Jal5L1QZLceL78pvEM9wEKcHeI24KorqMDoVX+gWsMGLulQMfOwsUaPtkpQM2pFERTzSfSg==</Sha512>
+      <Path>microsoft.extensions.dependencyinjection.abstractions/2.0.0</Path>
+      <HashFile>microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyModel">
+      <Version>[2.0.3]</Version>
+      <Sha512>OiNYN/QeZLuYcn4CvYrOmYgODPB1Jpqft+cT4F3Hkq5poj+1DLfbIBftMI/Pn8J7DyHhYeBMLxJUuugjvk/Fuw==</Sha512>
+      <Path>microsoft.extensions.dependencymodel/2.0.3</Path>
+      <HashFile>microsoft.extensions.dependencymodel.2.0.3.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DiagnosticAdapter">
+      <Version>[2.0.0]</Version>
+      <Sha512>b+LG3hhpIrNOAG+5Fxdt25wynlzawteFEuSUblM4a7flLpQpiZ0mAJMBuA+bIluGAfcJnFDTghF8MfE57fR6Hg==</Sha512>
+      <Path>microsoft.extensions.diagnosticadapter/2.0.0</Path>
+      <HashFile>microsoft.extensions.diagnosticadapter.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Abstractions">
+      <Version>[2.0.0]</Version>
+      <Sha512>Z0AK+hmLO33WAXQ5P1uPzhH7z5yjDHX/XnUefXxE//SyvCb9x4cVjND24dT5566t/yzGp8/WLD7EG9KQKZZklQ==</Sha512>
+      <Path>microsoft.extensions.fileproviders.abstractions/2.0.0</Path>
+      <HashFile>microsoft.extensions.fileproviders.abstractions.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Composite">
+      <Version>[2.0.0]</Version>
+      <Sha512>/Q95H1pFJuss7np9Pp6mKxg4ornSrBnrYwNkgHnW+YRqhjfaQLVgL+X+LN95M9YeGPNA4QHJDkbrqQ/n+jYc9g==</Sha512>
+      <Path>microsoft.extensions.fileproviders.composite/2.0.0</Path>
+      <HashFile>microsoft.extensions.fileproviders.composite.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded">
+      <Version>[2.0.0]</Version>
+      <Sha512>A1pniIZjS/8z8HQWIzm/datI6J0X4R9wngmVLGbfZ1LIj78oOR+sdqNHo5yvAwJz38TR9fG2E3b410wuoGxBKw==</Sha512>
+      <Path>microsoft.extensions.fileproviders.embedded/2.0.0</Path>
+      <HashFile>microsoft.extensions.fileproviders.embedded.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Physical">
+      <Version>[2.0.0]</Version>
+      <Sha512>DKO2j2socZbHNCCVEWsLVpB3AQIIzKYFNyITVeWdA1jQ829GJIQf4MUD04+1c+Q2kbK03pIKQZmEy4CGIfgDZw==</Sha512>
+      <Path>microsoft.extensions.fileproviders.physical/2.0.0</Path>
+      <HashFile>Microsoft.Extensions.FileProviders.Physical.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.FileSystemGlobbing">
+      <Version>[2.0.0]</Version>
+      <Sha512>UC87vRDUB7/vSaNY/FVhbdAyRkfFBTkYmcUoglxk6TyTojhSqYaG5pZsoP4e1ZuXktFXJXJBTvK8U/QwCo0z3g==</Sha512>
+      <Path>microsoft.extensions.filesystemglobbing/2.0.0</Path>
+      <HashFile>microsoft.extensions.filesystemglobbing.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions">
+      <Version>[2.0.1]</Version>
+      <Sha512>A43O0JzdTE+u5t2pFeraN+3fjlV6jcX3Ra5wIscCX1cM2RHDoOLDQmoDpvDti0ct5TsBEDHVTycbyFqtu0fm+Q==</Sha512>
+      <Path>microsoft.extensions.hosting.abstractions/2.0.1</Path>
+      <HashFile>microsoft.extensions.hosting.abstractions.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Identity.Core">
+      <Version>[2.0.1]</Version>
+      <Sha512>2VEghVORmv8FFE1utIcw/7ct8pyzvzst8uELnftf+xKVFiTPYFThlTFzq+ZuVCGgI7r9YayUUdZGuoDFvmJfFA==</Sha512>
+      <Path>microsoft.extensions.identity.core/2.0.1</Path>
+      <HashFile>microsoft.extensions.identity.core.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores">
+      <Version>[2.0.1]</Version>
+      <Sha512>A/sig+Oq5wQ2dUHawd2oH4QMqZVT9LLDZhsWCd+lfLavxEUJ7Lv2KI2wUeP84SQyeJjirsOAet0zkwVMS0nkMw==</Sha512>
+      <Path>microsoft.extensions.identity.stores/2.0.1</Path>
+      <HashFile>microsoft.extensions.identity.stores.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Localization">
+      <Version>[2.0.1]</Version>
+      <Sha512>47oTU1KBYU4xzJZlhQPJRbDCmjokjEtq5Iroy59nAGbPOfUrhBTgp7ALsoba/PVR/gURnosCg0YjHORyijhzUA==</Sha512>
+      <Path>microsoft.extensions.localization/2.0.1</Path>
+      <HashFile>microsoft.extensions.localization.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Localization.Abstractions">
+      <Version>[2.0.1]</Version>
+      <Sha512>A5uClthpWrEtqiK9tqwm8LIW449FLhSPIBs4hU/pINGXGgxqQC4dr2ZW0JmbGe/xL3riU7Me3jYJDR4uznzN7g==</Sha512>
+      <Path>microsoft.extensions.localization.abstractions/2.0.1</Path>
+      <HashFile>microsoft.extensions.localization.abstractions.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging">
+      <Version>[2.0.0]</Version>
+      <Sha512>VP10syWV/vxYYMKgZ2eDESmUsz3gPxvBn5J6tkVN8lI4M+dF43RN8fWsEPbcAneDmZrHl3Pv23z05nmyGkJlpg==</Sha512>
+      <Path>microsoft.extensions.logging/2.0.0</Path>
+      <HashFile>microsoft.extensions.logging.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions">
+      <Version>[2.0.0]</Version>
+      <Sha512>6ZCllUYGFukkymSTx3Yr0G/ajRxoNJp7/FqSxSB4fGISST54ifBhgu4Nc0ItGi3i6DqwuNd8SUyObmiC++AO2Q==</Sha512>
+      <Path>microsoft.extensions.logging.abstractions/2.0.0</Path>
+      <HashFile>microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices">
+      <Version>[2.0.0]</Version>
+      <Sha512>cxfmUAnNsETcGHlGFpaihN/wILPDD+4p4VrFzcskvOquwMSxt6O6SmPLybnbbvUvs26SCmP7Y4eptjO2ehfduA==</Sha512>
+      <Path>microsoft.extensions.logging.azureappservices/2.0.0</Path>
+      <HashFile>microsoft.extensions.logging.azureappservices.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Configuration">
+      <Version>[2.0.0]</Version>
+      <Sha512>jUjA+ROjh1R1TggLh4aw6PZFxHce4UYeTsX3NUjdrOd9RbuDSzJ8bkNhcPgYjLvoTNIRIlHUSByw3PjBTbxExA==</Sha512>
+      <Path>microsoft.extensions.logging.configuration/2.0.0</Path>
+      <HashFile>microsoft.extensions.logging.configuration.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Console">
+      <Version>[2.0.0]</Version>
+      <Sha512>NBjNp899FW7byDsex2ch/CkwNd2GbuHQIXCbvUVqOzSbnIsYrxOaR//BY2h2apJhnqm10IPLGkcjXxUyfAcIKA==</Sha512>
+      <Path>microsoft.extensions.logging.console/2.0.0</Path>
+      <HashFile>microsoft.extensions.logging.console.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug">
+      <Version>[2.0.0]</Version>
+      <Sha512>29Zn5m9yb4NEP+qbeLl+7F2lDskDfrs8NbrM8eJ+k/pYE8JksRUEFxHp1bcpGSfGP9w0pMQMOKrVcwD3u5sPog==</Sha512>
+      <Path>microsoft.extensions.logging.debug/2.0.0</Path>
+      <HashFile>microsoft.extensions.logging.debug.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.EventSource">
+      <Version>[2.0.0]</Version>
+      <Sha512>dsEyjnChr3F0rJZFAgfJC6aoIPLHfpBBTw3CYfEMEc7Pv7h0u6RaFO9gAq6dhfeBLhLfn0hyUrGmYIRDpSxs3w==</Sha512>
+      <Path>microsoft.extensions.logging.eventsource/2.0.0</Path>
+      <HashFile>microsoft.extensions.logging.eventsource.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.TraceSource">
+      <Version>[2.0.0]</Version>
+      <Sha512>lbNYFjLU4RJvhYtO5jLa+d+T8OC495SkSfXFwFDeR9qtFqhrrCHe8Htjx4wR8HmFqugaJ2Yhzw9AqdvZbEy3Eg==</Sha512>
+      <Path>microsoft.extensions.logging.tracesource/2.0.0</Path>
+      <HashFile>microsoft.extensions.logging.tracesource.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.ObjectPool">
+      <Version>[2.0.0]</Version>
+      <Sha512>drOmgNZCJiNEqFM/TvyqwtogS8wqoWGQCW5KB/CVGKL6VXHw8OOMdaHyspp8HPstP9UDnrnuq+8eaCaAcQg6tA==</Sha512>
+      <Path>microsoft.extensions.objectpool/2.0.0</Path>
+      <HashFile>microsoft.extensions.objectpool.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Options">
+      <Version>[2.0.0]</Version>
+      <Sha512>sAKBgjl2gWsECBLLR9K54T7/uZaP2n9GhMYHay/oOLfvpvX0+iNAlQ2NJgVE352C9Fs5CDV3VbNTK8T2aNKQFA==</Sha512>
+      <Path>microsoft.extensions.options/2.0.0</Path>
+      <HashFile>microsoft.extensions.options.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions">
+      <Version>[2.0.0]</Version>
+      <Sha512>Y/lGICwO27fCkQRK3tZseVzFjZaxfGmui990E67sB4MuiPzdJHnJDS/BeYWrHShSSBgCl4KyKRx4ux686fftPg==</Sha512>
+      <Path>microsoft.extensions.options.configurationextensions/2.0.0</Path>
+      <HashFile>microsoft.extensions.options.configurationextensions.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.PlatformAbstractions">
+      <Version>[1.1.0]</Version>
+      <Sha512>H6ZsQzxYw/6k2DfEQRXdC+vQ6obd6Uba3uGJrnJ2vG4PRXjQZ7seB13JdCfE72abp8E6Fk3gGgDzfJiLZi5ZpQ==</Sha512>
+      <Path>microsoft.extensions.platformabstractions/1.1.0</Path>
+      <HashFile>microsoft.extensions.platformabstractions.1.1.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Primitives">
+      <Version>[2.0.0]</Version>
+      <Sha512>ukg53qNlqTrK38WA30b5qhw0GD7y3jdI9PHHASjdKyTcBHTevFM2o23tyk3pWCgAV27Bbkm+CPQ2zUe1ZOuYSA==</Sha512>
+      <Path>microsoft.extensions.primitives/2.0.0</Path>
+      <HashFile>microsoft.extensions.primitives.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.WebEncoders">
+      <Version>[2.0.0]</Version>
+      <Sha512>5lXmAmfMaVssZwruaPM5hgk7QfzL1dfAaPEw9Ex24wt/D3EPRt7kOqsZoJP3IhVBoccjsTj8DsFJHtQ8bZIFkA==</Sha512>
+      <Path>microsoft.extensions.webencoders/2.0.0</Path>
+      <HashFile>microsoft.extensions.webencoders.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory">
+      <Version>[3.14.1]</Version>
+      <Sha512>GlyzF4FWsn3LXC6rrzw6Yg2nMbGLx+7JS9a6Z8n7jhqPa5cMiNEX01tBUO1v3A9p1mk+gQzHWJheAsSpOLp/ew==</Sha512>
+      <Path>microsoft.identitymodel.clients.activedirectory/3.14.1</Path>
+      <HashFile>microsoft.identitymodel.clients.activedirectory.3.14.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Logging">
+      <Version>[1.1.4]</Version>
+      <Sha512>j7t22EsDOuo0IXqAbp6ijdB1GuaY8cu3YoPNZpymOhUMTVC+wRTV0IHqxL31HacCnJHU/igsqe70fDKZgZu3oA==</Sha512>
+      <Path>microsoft.identitymodel.logging/1.1.4</Path>
+      <HashFile>microsoft.identitymodel.logging.1.1.4.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Protocols">
+      <Version>[2.1.4]</Version>
+      <Sha512>9aefRN9sL8XZo90Aix88IHHpAvfBl6UOiYpcKHiXbCYE2nB+zA3B8dZdNMOUH4pqXdnpYrHRDQZ2k7A4/CUgTQ==</Sha512>
+      <Path>microsoft.identitymodel.protocols/2.1.4</Path>
+      <HashFile>microsoft.identitymodel.protocols.2.1.4.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect">
+      <Version>[2.1.4]</Version>
+      <Sha512>LF8JcG9BqGRwVjhu/IebuZQer6TJGDv2uxNnmg2Zkzh/d+MIC1ShsC1U3U7pVaw03SKyXmCgYm+JG0WM0mcOUw==</Sha512>
+      <Path>microsoft.identitymodel.protocols.openidconnect/2.1.4</Path>
+      <HashFile>microsoft.identitymodel.protocols.openidconnect.2.1.4.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens">
+      <Version>[5.1.4]</Version>
+      <Sha512>SsJbZVPvjSlKFDAQmR2wpL6ZD/vCFlIsf0jxRlBJwyzKXZy3Wi/Xo+fE2MzAerLsJgG1UCdtplRwqDyq1euayw==</Sha512>
+      <Path>microsoft.identitymodel.tokens/5.1.4</Path>
+      <HashFile>microsoft.identitymodel.tokens.5.1.4.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Net.Http.Headers">
+      <Version>[2.0.1]</Version>
+      <Sha512>A61ddihPbPy9764AtCysy73oj/PA/9hsv21mXLX5QJYp9lkeyygTufTSGUmh9hz/SiZKy5GBreSlgD2Tm2ab9w==</Sha512>
+      <Path>microsoft.net.http.headers/2.0.1</Path>
+      <HashFile>microsoft.net.http.headers.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.Platforms">
+      <Version>[2.0.0]</Version>
+      <Sha512>VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==</Sha512>
+      <Path>microsoft.netcore.platforms/2.0.0</Path>
+      <HashFile>microsoft.netcore.platforms.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.Targets">
+      <Version>[1.1.0]</Version>
+      <Sha512>MSMO9mpIZ/QdetON8tH1Qr23a1lute3geR/D0TR29+avSx/q7royLXSDjyKqFY9jjP2cuMlEaMrYAEk4TIwj5w==</Sha512>
+      <Path>microsoft.netcore.targets/1.1.0</Path>
+      <HashFile>Microsoft.NETCore.Targets.1.1.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Rest.ClientRuntime">
+      <Version>[2.3.8]</Version>
+      <Sha512>Hj96LBoCwKY2VQKfSCVGGPV1sSumVjuYnrlpBwL4JSTnSK4b6ZxjLtXj8LgmKav8xJ2gps+UN7eI3hHVFKvBFw==</Sha512>
+      <Path>microsoft.rest.clientruntime/2.3.8</Path>
+      <HashFile>microsoft.rest.clientruntime.2.3.8.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Rest.ClientRuntime.Azure">
+      <Version>[3.3.7]</Version>
+      <Sha512>6u8JIuvrztse4tPOcvNzAJuzGBP0uY+Ijggk8ZYhp0siGEZ1XfZylf1vpNGUicvwcrhhoIgDW73Z1L6QGssr2g==</Sha512>
+      <Path>microsoft.rest.clientruntime.azure/3.3.7</Path>
+      <HashFile>microsoft.rest.clientruntime.azure.3.3.7.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink">
+      <Version>[2.0.1]</Version>
+      <Sha512>StbHXXY9tIPdcr6VbZRtn3nyZaBSMZnOVqJqjrXcTYjn3jdjLkgK+I67jNm4yREoKpjK+j71XQOS8sc8+tN8hQ==</Sha512>
+      <Path>microsoft.visualstudio.web.browserlink/2.0.1</Path>
+      <HashFile>microsoft.visualstudio.web.browserlink.2.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Win32.Primitives">
+      <Version>[4.3.0]</Version>
+      <Sha512>2SATUBP+BYXxWfxS/2BV9QpWuHckcJQxmp4PCaFvuxWXpmyo2QU/OwLO4AuEJm5E4eiTUotcb5aS+5cAkiC2oA==</Sha512>
+      <Path>microsoft.win32.primitives/4.3.0</Path>
+      <HashFile>Microsoft.Win32.Primitives.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Win32.Registry">
+      <Version>[4.4.0]</Version>
+      <Sha512>dA36TlNVn/XfrZtmf0fiI/z1nd3Wfp2QVzTdj26pqgP9LFWq0i1hYEUAW50xUjGFYn1+/cP3KGuxT2Yn1OUNBQ==</Sha512>
+      <Path>microsoft.win32.registry/4.4.0</Path>
+      <HashFile>microsoft.win32.registry.4.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="NETStandard.Library">
+      <Version>[2.0.0]</Version>
+      <Sha512>7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==</Sha512>
+      <Path>netstandard.library/2.0.0</Path>
+      <HashFile>netstandard.library.2.0.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>[10.0.1]</Version>
+      <Sha512>ebWzW9j2nwxQeBo59As2TYn7nYr9BHicqqCwHOD1Vdo+50HBtLPuqdiCYJcLdTRknpYis/DSEOQz5KmZxwrIAg==</Sha512>
+      <Path>newtonsoft.json/10.0.1</Path>
+      <HashFile>newtonsoft.json.10.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json.Bson">
+      <Version>[1.0.1]</Version>
+      <Sha512>5PYT/IqQ+UK31AmZiSS102R6EsTo+LGTSI8bp7WAUqDKaF4wHXD8U9u4WxTI1vc64tYi++8p3dk3WWNqPFgldw==</Sha512>
+      <Path>newtonsoft.json.bson/1.0.1</Path>
+      <HashFile>newtonsoft.json.bson.1.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="Remotion.Linq">
+      <Version>[2.1.1]</Version>
+      <Sha512>IJn0BqkvwEDpP+2qjvci7n4/a9f7DhKESLWb2/uG4xQh3rTkGTBUz69bI4IivCoKkTFAqjXxYDZw2K/npohjsw==</Sha512>
+      <Path>remotion.linq/2.1.1</Path>
+      <HashFile>remotion.linq.2.1.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl">
+      <Version>[4.3.0]</Version>
+      <Sha512>wkXX3gmeX/oDU7H8zbXGidrAc105UgMv62fXhOwJN6j0oOBhPdIzEVQ1ZlEzHTD68hjhUGnwWaigj/cDWFjmVw==</Sha512>
+      <Path>runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl/4.3.0</Path>
+      <HashFile>runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl">
+      <Version>[4.3.0]</Version>
+      <Sha512>qUTsgRIbYrYQ0DUDWvkMEuTz/OQyLoo6I8+xBqAVL4Q2oNPt9L9d/uEFqeeppJSg+RKDyqWw2wSxYPxmlPTUXg==</Sha512>
+      <Path>runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl/4.3.0</Path>
+      <HashFile>runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl">
+      <Version>[4.3.0]</Version>
+      <Sha512>PbazztSKGsdkT4hAI/Jd/joqKhjaHfkyLYadUv5pl33O/I0WhjP8ip5rrfaFGmdHK6I01Fr5xajEPy8I5kdhPQ==</Sha512>
+      <Path>runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl/4.3.0</Path>
+      <HashFile>runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.native.System">
+      <Version>[4.3.0]</Version>
+      <Sha512>TyhASB65XWa3+6xiky73ztRd2VVFjgX1AuXNnZzEqdjLgr1eljd5efaaHyQjs2KUcW4ta058SiozJxZtKgfhvQ==</Sha512>
+      <Path>runtime.native.system/4.3.0</Path>
+      <HashFile>runtime.native.System.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.native.System.Data.SqlClient.sni">
+      <Version>[4.4.0]</Version>
+      <Sha512>A8v6PGmk+UGbfWo5Ixup0lPM4swuSwOiayJExZwKIOjTlFFQIsu3QnDXECosBEyrWSPryxBVrdqtJyhK3BaupQ==</Sha512>
+      <Path>runtime.native.system.data.sqlclient.sni/4.4.0</Path>
+      <HashFile>runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.native.System.IO.Compression">
+      <Version>[4.3.0]</Version>
+      <Sha512>yhxr0yNRNG4/KTmt56X8TEovoYix+vsLVpKpFtbcZHOiYlykQKxF8asRTk2Jhe/r21Jm7reft2URWhM4HTErgQ==</Sha512>
+      <Path>runtime.native.system.io.compression/4.3.0</Path>
+      <HashFile>runtime.native.System.IO.Compression.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.native.System.Net.Http">
+      <Version>[4.3.0]</Version>
+      <Sha512>/nUqNRsseZw+MDZioH77p+3E9wYbWvbLYaY9tjQR5hxRUzDUTExoVNvq6Ult3NdK4Jl2EqDXmQI85BvLLi6btw==</Sha512>
+      <Path>runtime.native.system.net.http/4.3.0</Path>
+      <HashFile>runtime.native.System.Net.Http.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.native.System.Net.Security">
+      <Version>[4.3.0]</Version>
+      <Sha512>0tXgZGZrBOPRSQIB0qsfdYUgox/cVC2Lw4sy7NZ+mZOWoDtDvm7ZZNpLwzSBpOLDisflt0P0AAZj2I8prHlQQg==</Sha512>
+      <Path>runtime.native.system.net.security/4.3.0</Path>
+      <HashFile>runtime.native.System.Net.Security.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.native.System.Security.Cryptography.Apple">
+      <Version>[4.3.0]</Version>
+      <Sha512>XJG5oViw5REBzkA2WMCnUI5SqomtSxWN4H7HDBcdEoH+C3pDJx6Lu1HD1Z0PvFJogBiqapG+BvWeGyE2fkgtSw==</Sha512>
+      <Path>runtime.native.system.security.cryptography.apple/4.3.0</Path>
+      <HashFile>runtime.native.System.Security.Cryptography.Apple.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.native.System.Security.Cryptography.OpenSsl">
+      <Version>[4.3.0]</Version>
+      <Sha512>lpGPP6o8/e/vQMzyRWxYiDlbjia036Yy0zf0M0lBbwxH0ILVrdS61Y06O1l1pH/UJwnNPtaj8BHcw/EShd1f/Q==</Sha512>
+      <Path>runtime.native.system.security.cryptography.openssl/4.3.0</Path>
+      <HashFile>runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl">
+      <Version>[4.3.0]</Version>
+      <Sha512>Fvg0TBYjV35BoCKAG3hub9csUatHVhoORxFwpSUURL6OycI9B1Tx/auJ0BjHvd8m7nhlVxLZER9cRrQzP1QHlg==</Sha512>
+      <Path>runtime.opensuse.13.2-x64.runtime.native.system.security.cryptography.openssl/4.3.0</Path>
+      <HashFile>runtime.opensuse.13.2-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl">
+      <Version>[4.3.0]</Version>
+      <Sha512>xusV5HKZq8kxXRxVEHHtl8ewIGBpfZ8GQfNuHVmNCdt6Ovm86pMWAXicpNmBwfNUgKAgQsquaqktbhauVV6x4Q==</Sha512>
+      <Path>runtime.opensuse.42.1-x64.runtime.native.system.security.cryptography.openssl/4.3.0</Path>
+      <HashFile>runtime.opensuse.42.1-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple">
+      <Version>[4.3.0]</Version>
+      <Sha512>ObNMtJL/NrvnEBbEtzuooNz+AXSbMZP8NPQckrQb+VTp7b08m/JAG2urY99vJwq/u68vbGj9I/3dnnDC6i+mjw==</Sha512>
+      <Path>runtime.osx.10.10-x64.runtime.native.system.security.cryptography.apple/4.3.0</Path>
+      <HashFile>runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.Apple.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl">
+      <Version>[4.3.0]</Version>
+      <Sha512>swLVTO4OmUdAfroHk/3G4BRWpfye4Sxz/xte986cEujrv1QEhNRJRtv+5/39A680u/EIF+t4pjttzqaMUD8M4Q==</Sha512>
+      <Path>runtime.osx.10.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0</Path>
+      <HashFile>runtime.osx.10.10-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl">
+      <Version>[4.3.0]</Version>
+      <Sha512>bFQqXHoY170kW0amA52AfyjhV8jgKW4tPXQRUXqci6FMhwCAJYURSItokKo/n+IjBxWo6xj6urIj2b+ZScg7sQ==</Sha512>
+      <Path>runtime.rhel.7-x64.runtime.native.system.security.cryptography.openssl/4.3.0</Path>
+      <HashFile>runtime.rhel.7-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl">
+      <Version>[4.3.0]</Version>
+      <Sha512>GGqc4qs7z/hYdNtnW8stPh9kn12EDT6WfMWSzh7/FxpZ2t/0KuvD8sBCDf8hLdTt2xmTVSH074EI/ZGQ44bgIQ==</Sha512>
+      <Path>runtime.ubuntu.14.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0</Path>
+      <HashFile>runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl">
+      <Version>[4.3.0]</Version>
+      <Sha512>HtzaIKarAsqfY56rzcPn+zMB2zMtuvEHWe8MJRFMHQh1TnBnBkByinaUHWGo7kJLT8X7DjAgNj2nIDeV0k7cFA==</Sha512>
+      <Path>runtime.ubuntu.16.04-x64.runtime.native.system.security.cryptography.openssl/4.3.0</Path>
+      <HashFile>runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl">
+      <Version>[4.3.0]</Version>
+      <Sha512>U5ncaC9dWUB0bWaXURDX4rdB2oByjt0mx/7/h/PH/oMjuBTByNSmwA0e2un4+a77KTun3pT1EbDBMMzG19q0NA==</Sha512>
+      <Path>runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0</Path>
+      <HashFile>runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.win-arm64.runtime.native.System.Data.SqlClient.sni">
+      <Version>[4.4.0]</Version>
+      <Sha512>LbrynESTp3bm5O/+jGL8v0Qg5SJlTV08lpIpFesXjF6uGNMWqFnUQbYBJwZTeua6E/Y7FIM1C54Ey1btLWupdg==</Sha512>
+      <Path>runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0</Path>
+      <HashFile>runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.win-x64.runtime.native.System.Data.SqlClient.sni">
+      <Version>[4.4.0]</Version>
+      <Sha512>38ugOfkYJqJoX9g6EYRlZB5U2ZJH51UP8ptxZgdpS07FgOEToV+lS11ouNK2PM12Pr6X/PpT5jK82G3DwH/SxQ==</Sha512>
+      <Path>runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0</Path>
+      <HashFile>runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="runtime.win-x86.runtime.native.System.Data.SqlClient.sni">
+      <Version>[4.4.0]</Version>
+      <Sha512>YhEdSQUsTx+C8m8Bw7ar5/VesXvCFMItyZF7G1AUY+OM0VPZUOeAVpJ4Wl6fydBGUYZxojTDR3I6Bj/+BPkJNA==</Sha512>
+      <Path>runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0</Path>
+      <HashFile>runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="SharpZipLib">
+      <Version>[1.0.0-alpha2]</Version>
+      <Sha512>ndshrRoIzWdvoHr5ncGvSp3p/At+H2l4nT4bfWgPB0VU39TOT5/6uS6XbkO9N95Y8quO5RgLMiEBO3M0nq4pXw==</Sha512>
+      <Path>sharpziplib/1.0.0-alpha2</Path>
+      <HashFile>sharpziplib.1.0.0-alpha2.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="SQLitePCLRaw.bundle_green">
+      <Version>[1.1.7]</Version>
+      <Sha512>Kw+n4CUhQ8S4YAPmpRUldO8S7c4LU7HHukJF0v5Sfggf8Ia9YVdIh0dYkMvKvS+DTX+OBORSMqPM0CGfAzFtVA==</Sha512>
+      <Path>sqlitepclraw.bundle_green/1.1.7</Path>
+      <HashFile>sqlitepclraw.bundle_green.1.1.7.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="SQLitePCLRaw.core">
+      <Version>[1.1.7]</Version>
+      <Sha512>u9k9ZFkyTU6CVyXWpRuuXOvKi/cy/xt1oGKVSW8aUKcTL4RdH34yFNtVykEeiR68ojIEvmoZfL51h/xx2IQk5g==</Sha512>
+      <Path>sqlitepclraw.core/1.1.7</Path>
+      <HashFile>sqlitepclraw.core.1.1.7.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.linux">
+      <Version>[1.1.7]</Version>
+      <Sha512>KRqMd1qLwJ4pzPybj8q95s+wV6jby5F0O/rp0vw3wa2Z2wHxRm0VqxS2Sejlr7Ctz+LxSr8DpNg1l1u6n/PAPA==</Sha512>
+      <Path>sqlitepclraw.lib.e_sqlite3.linux/1.1.7</Path>
+      <HashFile>sqlitepclraw.lib.e_sqlite3.linux.1.1.7.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.osx">
+      <Version>[1.1.7]</Version>
+      <Sha512>hdZx1DKHbDi4li6abmJ+A29mxY8D6BcM0s8VMT8p4MWEyrj54CZFUm402jTV6OgZCsFGkbRFnuFdBXf4vSDO7g==</Sha512>
+      <Path>sqlitepclraw.lib.e_sqlite3.osx/1.1.7</Path>
+      <HashFile>sqlitepclraw.lib.e_sqlite3.osx.1.1.7.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="SQLitePCLRaw.lib.e_sqlite3.v110_xp">
+      <Version>[1.1.7]</Version>
+      <Sha512>roIdTH4a4iFa08HOwTWnzj2QYBIpSZRYfLSvHjtbH67I4DSWregrd4jkSnoOuwC5GHG08FNahBfEx3HAsVqW+g==</Sha512>
+      <Path>sqlitepclraw.lib.e_sqlite3.v110_xp/1.1.7</Path>
+      <HashFile>sqlitepclraw.lib.e_sqlite3.v110_xp.1.1.7.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="SQLitePCLRaw.provider.e_sqlite3.netstandard11">
+      <Version>[1.1.7]</Version>
+      <Sha512>Zdug2wETm6847337EtD8MoCAtOdwM6prEXL/UsJ97Zxvoeyk/gUpdtuFNBxgJzceuty0jymjxm5yur5QajdApg==</Sha512>
+      <Path>sqlitepclraw.provider.e_sqlite3.netstandard11/1.1.7</Path>
+      <HashFile>sqlitepclraw.provider.e_sqlite3.netstandard11.1.1.7.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="StackExchange.Redis.StrongName">
+      <Version>[1.2.4]</Version>
+      <Sha512>qrfSB1BnmM17V20A4yvvNA0HNiDgnBd/CcjaeMKMA4qtup1uuBUMyhl20oj31fRVo71E/fXTbmQCuM9ytBJs6w==</Sha512>
+      <Path>stackexchange.redis.strongname/1.2.4</Path>
+      <HashFile>stackexchange.redis.strongname.1.2.4.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.AppContext">
+      <Version>[4.3.0]</Version>
+      <Sha512>URkpBnynuz/QRcxXf8bAumvy3rQAH0NCTIQD2D4UEefW6lDWnCDwjeNHlmJYX92a6ZlLr2+IqQndScDtzlwbmQ==</Sha512>
+      <Path>system.appcontext/4.3.0</Path>
+      <HashFile>System.AppContext.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Buffers">
+      <Version>[4.4.0]</Version>
+      <Sha512>AwarXzzoDwX6BgrhjoJsk6tUezZEozOT5Y9QKF94Gl4JK91I4PIIBkBco9068Y9/Dra8Dkbie99kXB8+1BaYKw==</Sha512>
+      <Path>system.buffers/4.4.0</Path>
+      <HashFile>system.buffers.4.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Collections">
+      <Version>[4.3.0]</Version>
+      <Sha512>4+J9/j+cHE1qfg50A3UC+gW7DhhoB4V+caBlZp2Tia6jx/Mf+MufPpCE+YH+1okhOzyiTblV2FjdU5IXLvy8YA==</Sha512>
+      <Path>system.collections/4.3.0</Path>
+      <HashFile>System.Collections.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Collections.Concurrent">
+      <Version>[4.3.0]</Version>
+      <Sha512>eDQ8SuFlxPQNnHPGo86UkY5jQhby2RzAMd07Jayfyvx3xWzOw9CThPAembRdmZFYmprZQJmbVT/op2SzRbpDtA==</Sha512>
+      <Path>system.collections.concurrent/4.3.0</Path>
+      <HashFile>System.Collections.Concurrent.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Collections.Immutable">
+      <Version>[1.4.0]</Version>
+      <Sha512>71hw5RUJRu5+q/geUY69gpXD8Upd12cH+F3MwpXV2zle7Bqqkrmc1JblOTuvUcgmdnUtQvBlV5e1d6RH+H2lvA==</Sha512>
+      <Path>system.collections.immutable/1.4.0</Path>
+      <HashFile>system.collections.immutable.1.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Collections.NonGeneric">
+      <Version>[4.3.0]</Version>
+      <Sha512>5eIJGqCkD00+5t6X5L8vtsQSAdY4qsLSOq6gSz/xdQ2REJYFlpuY4dapnpZdPmPsZ1lXXJ0TLcMfT+2FAEFLwg==</Sha512>
+      <Path>system.collections.nongeneric/4.3.0</Path>
+      <HashFile>system.collections.nongeneric.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Collections.Specialized">
+      <Version>[4.3.0]</Version>
+      <Sha512>3lazb/FnMZhlUhMxGoAJLxXiU/kSMQkdo4aEA9+WYAILl/ukaaRxRQpg6Th/xwcKMB55+uUtbc6LXWCtN/FB2g==</Sha512>
+      <Path>system.collections.specialized/4.3.0</Path>
+      <HashFile>system.collections.specialized.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel">
+      <Version>[4.3.0]</Version>
+      <Sha512>AQkBy5+DyTG/nNBsR9RBTTigX09VgQYKcXvh88Xgx02xX1X7mLqR5rsF//Kx0UkJZoJIHUkAaSQvcFh7uQfPFA==</Sha512>
+      <Path>system.componentmodel/4.3.0</Path>
+      <HashFile>System.ComponentModel.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel.Annotations">
+      <Version>[4.4.0]</Version>
+      <Sha512>29K3DQ+IGU7LBaMjTo7SI7T7X/tsMtLvz1p56LJ556Iu0Dw3pKZw5g8yCYCWMRxrOF0Hr0FU0FwW0o42y2sb3A==</Sha512>
+      <Path>system.componentmodel.annotations/4.4.0</Path>
+      <HashFile>system.componentmodel.annotations.4.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel.Primitives">
+      <Version>[4.3.0]</Version>
+      <Sha512>dUo5Bi9I1tTgTRdcJ/Z4Gv3Fp87NDtF+Kh1fyatCMbM7bpcq8TszoyrB9Y7/+HgVnLTh346Fjx78jdWgCozLDw==</Sha512>
+      <Path>system.componentmodel.primitives/4.3.0</Path>
+      <HashFile>system.componentmodel.primitives.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.ComponentModel.TypeConverter">
+      <Version>[4.3.0]</Version>
+      <Sha512>O2va0WrBW2AY++b+RUs4yGuq+OOZoZyoBHHxf6FLW7k5y6fR6gJ/MpCrj7yiexkulTiweVCJQiH1lYxIdq6mWw==</Sha512>
+      <Path>system.componentmodel.typeconverter/4.3.0</Path>
+      <HashFile>system.componentmodel.typeconverter.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Console">
+      <Version>[4.3.0]</Version>
+      <Sha512>l+9X0geOEFxhp7D4yieFgt6iBsltS4NbUFxI0m0Nb/+c9aYs4UlaGLyZWqBIAgLYkUAcoRoVNoJzkOgMJG9Wlw==</Sha512>
+      <Path>system.console/4.3.0</Path>
+      <HashFile>System.Console.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Data.SqlClient">
+      <Version>[4.4.0]</Version>
+      <Sha512>fxb9ghn1k1Ua7FFdlvtiBOD4/PsQvD/fk2KnhS+FK7VC6OggEx6P+lP1P0+KMb5V2dqS1+FbR7HCenoqzJMNIA==</Sha512>
+      <Path>system.data.sqlclient/4.4.0</Path>
+      <HashFile>system.data.sqlclient.4.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Diagnostics.Contracts">
+      <Version>[4.3.0]</Version>
+      <Sha512>eelRRbnm+OloiQvp9CXS0ixjNQldjjkHO4iIkR5XH2VIP8sUB/SIpa1TdUW6/+HDcQ+MlhP3pNa1u5SbzYuWGA==</Sha512>
+      <Path>system.diagnostics.contracts/4.3.0</Path>
+      <HashFile>system.diagnostics.contracts.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Diagnostics.Debug">
+      <Version>[4.3.0]</Version>
+      <Sha512>pZ+U6FtXhhBSV5qUBuAd6//G3qjBu2SULCLZO+LEpCdqUnGNvkOAm3QdZSJXLzgNZyT9KPxDGEc9fD5Ap+RMnQ==</Sha512>
+      <Path>system.diagnostics.debug/4.3.0</Path>
+      <HashFile>System.Diagnostics.Debug.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Diagnostics.DiagnosticSource">
+      <Version>[4.4.1]</Version>
+      <Sha512>U/KcC19fyLsPN1GLmeU2zQq15MMVcPwMOYPADVo1+WIoJpvMHxrzvl+BLLZwTEZSneGwaPFZ0aWr0nJ7B7LSdA==</Sha512>
+      <Path>system.diagnostics.diagnosticsource/4.4.1</Path>
+      <HashFile>system.diagnostics.diagnosticsource.4.4.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Diagnostics.FileVersionInfo">
+      <Version>[4.3.0]</Version>
+      <Sha512>omCF64wzQ3Q2CeIqkD6lmmxeMZtGHUmzgFMPjfVaOsyqpR66p/JaZzManMw1s33osoAb5gqpncsjie67+yUPHQ==</Sha512>
+      <Path>system.diagnostics.fileversioninfo/4.3.0</Path>
+      <HashFile>system.diagnostics.fileversioninfo.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Diagnostics.StackTrace">
+      <Version>[4.3.0]</Version>
+      <Sha512>BiHg0vgtd35/DM9jvtaC1eKRpWZxr0gcQd643ABG7GnvSlf5pOkY2uyd42mMOJoOmKvnpNj0F4tuoS1pacTwYw==</Sha512>
+      <Path>system.diagnostics.stacktrace/4.3.0</Path>
+      <HashFile>system.diagnostics.stacktrace.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Diagnostics.Tools">
+      <Version>[4.3.0]</Version>
+      <Sha512>Kp+bFHnApyI8OczpMprZFcac6OPZzys6ftbgB/eLFF8Kp7PL5oxgu33QBb/1C/ge300IQ67ZRaPryZDJEOceLA==</Sha512>
+      <Path>system.diagnostics.tools/4.3.0</Path>
+      <HashFile>System.Diagnostics.Tools.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Diagnostics.Tracing">
+      <Version>[4.3.0]</Version>
+      <Sha512>H8ZCnYHxMpPky1Yiu63nUYo3sf50hrazKRVbmDegq0d9pZUSuJDWy/cB/i9hBJb04w3JGggaV4se+uIFIRQshw==</Sha512>
+      <Path>system.diagnostics.tracing/4.3.0</Path>
+      <HashFile>System.Diagnostics.Tracing.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Dynamic.Runtime">
+      <Version>[4.3.0]</Version>
+      <Sha512>tx30KJsLKO8UEIYOxOBASZ4efoIe3ld8qZSzKpVbGdrX9Tp9bsupboRifie+oK9Lnja2USQMBA/Z6OAKsM2oWg==</Sha512>
+      <Path>system.dynamic.runtime/4.3.0</Path>
+      <HashFile>System.Dynamic.Runtime.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Globalization">
+      <Version>[4.3.0]</Version>
+      <Sha512>OH0bV1F7iCoAoFcxUP6apwBl0I5z+KJSbevH1N1sYfGM8a85oByIV/xrGf+uGNM4OwlbPhyo89ieO5cA/bPgAg==</Sha512>
+      <Path>system.globalization/4.3.0</Path>
+      <HashFile>System.Globalization.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Globalization.Calendars">
+      <Version>[4.3.0]</Version>
+      <Sha512>Y6FTSvpymT+Jf9yeyNeTkBXVBrTqzUUcAIgxAHf4yr5gWTv809lc2RD8ew/geTG9cBj+thAadx0iOaRwPCArAg==</Sha512>
+      <Path>system.globalization.calendars/4.3.0</Path>
+      <HashFile>System.Globalization.Calendars.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Globalization.Extensions">
+      <Version>[4.3.0]</Version>
+      <Sha512>eYAoa/EZY/e2dqUoaGtQn/2IkDq7Ft6t54VXu4z86FWF8AwEOKizlaolo9o+jDwrgJfU2JBFHL8/JrakkbhGfg==</Sha512>
+      <Path>system.globalization.extensions/4.3.0</Path>
+      <HashFile>System.Globalization.Extensions.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt">
+      <Version>[5.1.4]</Version>
+      <Sha512>hLUU1N99aL9uyxiTraBnCKlpUKsbP/+5ygD7cswspH9/+M7fAAL0hRzt2aA4w7VEQlSSiu8j+xWFk3NRcqhfQQ==</Sha512>
+      <Path>system.identitymodel.tokens.jwt/5.1.4</Path>
+      <HashFile>system.identitymodel.tokens.jwt.5.1.4.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Interactive.Async">
+      <Version>[3.1.1]</Version>
+      <Sha512>hZccYiIE5RS1/J9Tb/BNtosAGVggdlsJm4Ojdu+gDV0p4AIi+LUfUogMKkRacljQEJd2AG6vYzvcjhQFkqoZmw==</Sha512>
+      <Path>system.interactive.async/3.1.1</Path>
+      <HashFile>system.interactive.async.3.1.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.IO">
+      <Version>[4.3.0]</Version>
+      <Sha512>opjmK0oMxtbPh62V5ADEZXzLcmI2BLh8cGJ9CpzcnrHyGoLeKu173ioid0OpeRwO2q2afYIvcS54a/GRpBl6uA==</Sha512>
+      <Path>system.io/4.3.0</Path>
+      <HashFile>System.IO.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.IO.Compression">
+      <Version>[4.3.0]</Version>
+      <Sha512>+P4QE3T/JdMfQnvz1DPxgkkT7453Gkbg6HVUAVSF10PRyuzguPHq6h5fKydMgHSB6yxHsAJs22+ejqQb6R+Iyg==</Sha512>
+      <Path>system.io.compression/4.3.0</Path>
+      <HashFile>System.IO.Compression.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.IO.FileSystem">
+      <Version>[4.3.0]</Version>
+      <Sha512>fjvm8kv8IP06l9o6uIZoZQhuoEXyhoXObNPhiCIakV3nK4o8rTVuVyPtyCmoz+xzyiDgsnBEL0rBkhfHIpdd7A==</Sha512>
+      <Path>system.io.filesystem/4.3.0</Path>
+      <HashFile>System.IO.FileSystem.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.IO.FileSystem.Primitives">
+      <Version>[4.3.0]</Version>
+      <Sha512>JbcsKEyXV362ii3c1DDYZaodP1xnN2NfH/3gUsym+B5s9pATFoLh2TfiqmeJ9cGs2bk2+jasmT2eSz0yAqqjsw==</Sha512>
+      <Path>system.io.filesystem.primitives/4.3.0</Path>
+      <HashFile>System.IO.FileSystem.Primitives.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.IO.Pipes">
+      <Version>[4.3.0]</Version>
+      <Sha512>wpGJuACA6r8+KRckXoI6ghGTwgPRiICI6T7kgHI/m7S5eMqV/8jH37fzAUhTwIe9RwlH/j1sWwm2Q2zyXwZGHw==</Sha512>
+      <Path>system.io.pipes/4.3.0</Path>
+      <HashFile>system.io.pipes.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Linq">
+      <Version>[4.3.0]</Version>
+      <Sha512>s8qk7S5j9CokBU/SF+87dlZ7FY9miccS9huo76L0eesGrgJNd0UOlvQ8hzOhxvYfynOQaod1GdoMOrcsAZd9DQ==</Sha512>
+      <Path>system.linq/4.3.0</Path>
+      <HashFile>System.Linq.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Linq.Expressions">
+      <Version>[4.3.0]</Version>
+      <Sha512>3ul4zrDjdxB3aOlYMdlrOr82HwW60E1D+1KGDz38ZkzRjJHJMYR8v9UIlU4iDO1iKijVhnoySagpdwEZqCIuNw==</Sha512>
+      <Path>system.linq.expressions/4.3.0</Path>
+      <HashFile>System.Linq.Expressions.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Linq.Queryable">
+      <Version>[4.0.1]</Version>
+      <Sha512>Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==</Sha512>
+      <Path>system.linq.queryable/4.0.1</Path>
+      <HashFile>System.Linq.Queryable.4.0.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Net.Http">
+      <Version>[4.3.0]</Version>
+      <Sha512>8y8J/RkaH9wnQsLgQHU08nAfA6Vz9Ii6ACCRyNInuTpwQqwJwSGH06SoUvCUgz15iZeHI/8O+NAyqI/J5Z3unQ==</Sha512>
+      <Path>system.net.http/4.3.0</Path>
+      <HashFile>System.Net.Http.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Net.NameResolution">
+      <Version>[4.3.0]</Version>
+      <Sha512>5yWkJ7O6788Jl272OAskgJQBrUq9/yzKX0ViPmN7mJKbVLgIusUmQwPx4ivb+2fqaX07dD3ZM3M5gA8wYlVg9w==</Sha512>
+      <Path>system.net.nameresolution/4.3.0</Path>
+      <HashFile>System.Net.NameResolution.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Net.Primitives">
+      <Version>[4.3.0]</Version>
+      <Sha512>o7aW4c9aqmKTiHI9mszYlCsC+KRe0KoDR7oK0pbMu93ndQXqGi/mH0rRBzclHQL2kX/OyAMitEJPm/Pv+b72ug==</Sha512>
+      <Path>system.net.primitives/4.3.0</Path>
+      <HashFile>System.Net.Primitives.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Net.Requests">
+      <Version>[4.3.0]</Version>
+      <Sha512>qRRx7ZhTu/6f2nZuL36StD/oiEZtMb9yAcrrcDkIiBRV+/49kzIW4qPQyIcn8mzGvP81PhtZyBHThWUkr9viJA==</Sha512>
+      <Path>system.net.requests/4.3.0</Path>
+      <HashFile>System.Net.Requests.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Net.Security">
+      <Version>[4.3.0]</Version>
+      <Sha512>hwC5Ep6+9plZY6y4ZK5kTYp63cLvbTXVgCSTkMYcbL3TjTN/JUCmibt+DKfzQYv5wfaKT05N797yjyM9cGE42A==</Sha512>
+      <Path>system.net.security/4.3.0</Path>
+      <HashFile>System.Net.Security.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Net.Sockets">
+      <Version>[4.3.0]</Version>
+      <Sha512>bSnqlL04eEbGxvSwqt2X0Ki8zHggdm4fa+/JHbboRSuYS0sn3yoG7U/FfV8YP2n5YrB2DgBbO9sy+PsKKVUp8w==</Sha512>
+      <Path>system.net.sockets/4.3.0</Path>
+      <HashFile>System.Net.Sockets.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Net.WebHeaderCollection">
+      <Version>[4.3.0]</Version>
+      <Sha512>IWnjsP5E4JPLvlPBc4FNAF6OSRu/8GcxOvjcweeYExT4q2HzQlNPiQOvLUe/hte5temYUO61EI+8X8Ifuahy0Q==</Sha512>
+      <Path>system.net.webheadercollection/4.3.0</Path>
+      <HashFile>System.Net.WebHeaderCollection.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Numerics.Vectors">
+      <Version>[4.4.0]</Version>
+      <Sha512>UiLzLW+Lw6HLed1Hcg+8jSRttrbuXv7DANVj0DkL9g6EnnzbL75EB7EWsw5uRbhxd/4YdG8li5XizGWepmG3PQ==</Sha512>
+      <Path>system.numerics.vectors/4.4.0</Path>
+      <HashFile>system.numerics.vectors.4.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.ObjectModel">
+      <Version>[4.3.0]</Version>
+      <Sha512>SDCQpfyU/f2VROzK0aEYJ+M6FGthlfAQNxi3lzR42cPx/o4nNIuVS4uBwWWZYTuAPtLiaD4IDDODolDN7vFyhw==</Sha512>
+      <Path>system.objectmodel/4.3.0</Path>
+      <HashFile>System.ObjectModel.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Private.DataContractSerialization">
+      <Version>[4.1.1]</Version>
+      <Sha512>lcqFBUaCZxPiUkA4dlSOoPZGtZsAuuElH2XHgLwGLxd7ZozWetV5yiz0qGAV2AUYOqw97MtZBjbLMN16Xz4vXA==</Sha512>
+      <Path>system.private.datacontractserialization/4.1.1</Path>
+      <HashFile>system.private.datacontractserialization.4.1.1.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Reflection">
+      <Version>[4.3.0]</Version>
+      <Sha512>lED9O3JWQcF2b90Vsbrhiy+7f5wo5U+OHElRvtLcR7OpvqCNcSYz3CmUQaIFXUrtReg4cQpdcwymTKuLFi7nrA==</Sha512>
+      <Path>system.reflection/4.3.0</Path>
+      <HashFile>System.Reflection.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Reflection.Emit">
+      <Version>[4.3.0]</Version>
+      <Sha512>OviHnMcIID5+qrj9+NIvfSYBm2Vpp1u5KOeBIeN+CrHoFPgS9Gw1M5q6jJUHAXZRvIke4NNM0gF2fJZNAaIw0Q==</Sha512>
+      <Path>system.reflection.emit/4.3.0</Path>
+      <HashFile>System.Reflection.Emit.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Reflection.Emit.ILGeneration">
+      <Version>[4.3.0]</Version>
+      <Sha512>FxgmpNNnWMuuO7cnx+X0rp/iBZjBklOQtrLUMHDxdFLnXQd4jsgKgY6R35THOokvIGuKCWcyaJzCqvijZhGFpw==</Sha512>
+      <Path>system.reflection.emit.ilgeneration/4.3.0</Path>
+      <HashFile>System.Reflection.Emit.ILGeneration.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Reflection.Emit.Lightweight">
+      <Version>[4.3.0]</Version>
+      <Sha512>+5v7SvTDG1DT+sLki/T69DByAsRmA6IpPeTYDDeom4jjnAcK4DHNz5g8acvA1XpRgMyxZmj9qSzxHJ12VOvGOg==</Sha512>
+      <Path>system.reflection.emit.lightweight/4.3.0</Path>
+      <HashFile>System.Reflection.Emit.Lightweight.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Reflection.Extensions">
+      <Version>[4.3.0]</Version>
+      <Sha512>3uy/89optX4JLqYzIvRoLbmOrzi/lpOKQn0/3OLukRecGairb0HU2XFLXfNxLweK4IGHJoxxKvTxetE1xy5+5g==</Sha512>
+      <Path>system.reflection.extensions/4.3.0</Path>
+      <HashFile>System.Reflection.Extensions.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Reflection.Metadata">
+      <Version>[1.5.0]</Version>
+      <Sha512>423hF/x1/1/aBT6hjgrp8RH2zdKOd1iTujlHisSesTW/cgv1ixUitfk23ZknVzItMm6jnwp9CBwI2P3r9jpitw==</Sha512>
+      <Path>system.reflection.metadata/1.5.0</Path>
+      <HashFile>system.reflection.metadata.1.5.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Reflection.Primitives">
+      <Version>[4.3.0]</Version>
+      <Sha512>WLyqEGXWZpVrPm8Bb1few1HiV1Ht5l1Y43yByCu27165RrVSZ7MliBzAxO3GkzF3OVxXiJRGiTDzCwvFudHl9Q==</Sha512>
+      <Path>system.reflection.primitives/4.3.0</Path>
+      <HashFile>System.Reflection.Primitives.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Reflection.TypeExtensions">
+      <Version>[4.3.0]</Version>
+      <Sha512>86bEgGgJU97Kn8Su67nKBZ6gqSnG/tbJw9tEg6VxEbZy5SNLlcmBVUT0zv3Fc7bJ4shwUOiQI4Nv7ucZVZdDlQ==</Sha512>
+      <Path>system.reflection.typeextensions/4.3.0</Path>
+      <HashFile>System.Reflection.TypeExtensions.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Resources.ResourceManager">
+      <Version>[4.3.0]</Version>
+      <Sha512>gxKQTd3N7EDtUsXQ/AXkvdV/iAUsNnJrfc3znmDRvuO4C+wxUatZvL9bc1UzQFflqDXSYvCnHC/w0GzwLbyjNw==</Sha512>
+      <Path>system.resources.resourcemanager/4.3.0</Path>
+      <HashFile>System.Resources.ResourceManager.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Runtime">
+      <Version>[4.3.0]</Version>
+      <Sha512>qxgbYkRKyrTypf3GSdhEyo/7RQ1kqcKqoHHzJVGxo8jd6UbtcYN+634gTLHsnerPac98r/lrC1R9UOH1MSELLg==</Sha512>
+      <Path>system.runtime/4.3.0</Path>
+      <HashFile>System.Runtime.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe">
+      <Version>[4.4.0]</Version>
+      <Sha512>9dLLuBxr5GNmOfl2jSMcsHuteEg32BEfUotmmUkmZjpR3RpVHE8YQwt0ow3p6prwA1ME8WqDVZqrr8z6H8G+Kw==</Sha512>
+      <Path>system.runtime.compilerservices.unsafe/4.4.0</Path>
+      <HashFile>system.runtime.compilerservices.unsafe.4.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.Extensions">
+      <Version>[4.3.0]</Version>
+      <Sha512>2TrVWLB026+JTDUjYXGNh4ocjMhQoMrsw6CPolZKZG4BC7mr9MmBLmvFOtFbJs4MZkhwla2n5euSVfUQ09nxNA==</Sha512>
+      <Path>system.runtime.extensions/4.3.0</Path>
+      <HashFile>System.Runtime.Extensions.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.Handles">
+      <Version>[4.3.0]</Version>
+      <Sha512>e+U2kwqHtgW7xXSY/FuH0Z2HEQ8a6n5Oh5Lah5Y2OIX3GtTExcbP6j0UDx9RdWQSQFDmAj98YbdPGsUvqxamWw==</Sha512>
+      <Path>system.runtime.handles/4.3.0</Path>
+      <HashFile>System.Runtime.Handles.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.InteropServices">
+      <Version>[4.3.0]</Version>
+      <Sha512>9yz4WJ8Evu7naQAQ2bSsIQeiF7c8wMZoaivLxC0sZyMA+uMJCe/S5NXMwMW8SNCLnyAunsXYvJRHqmWYMr2Mlg==</Sha512>
+      <Path>system.runtime.interopservices/4.3.0</Path>
+      <HashFile>System.Runtime.InteropServices.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation">
+      <Version>[4.3.0]</Version>
+      <Sha512>K4NLfQzc8V0TKpfA9LIN95PHUj8bNE+QNhtroOtslkSoeaLIe3woWyilG+vBvRXK3V2xDtW08ECPYIt5/goD7A==</Sha512>
+      <Path>system.runtime.interopservices.runtimeinformation/4.3.0</Path>
+      <HashFile>System.Runtime.InteropServices.RuntimeInformation.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.Numerics">
+      <Version>[4.3.0]</Version>
+      <Sha512>G3kip2qJJ3lihMkEQQgZQNW/tTu/Tfv22eZooFOWQqEJx0sGa2Z7WtilcNhbIJk92ih1fEqh4kfyF6uKcI5/vg==</Sha512>
+      <Path>system.runtime.numerics/4.3.0</Path>
+      <HashFile>System.Runtime.Numerics.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.Serialization.Formatters">
+      <Version>[4.3.0]</Version>
+      <Sha512>zAzHUVmBN3WkRm7xFvU6gJBcIEKFRTnjAA9pLT+EXPwiGSsSP+r8BRxTxzR4sj9eRTsRg9+im3IFP+7Bd+NJzQ==</Sha512>
+      <Path>system.runtime.serialization.formatters/4.3.0</Path>
+      <HashFile>system.runtime.serialization.formatters.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.Serialization.Json">
+      <Version>[4.0.2]</Version>
+      <Sha512>+7DIJhnKYgCzUgcLbVTtRQb2l1M0FP549XFlFkQM5lmNiUBl44AfNbx4bz61xA8PzLtlYwfmif4JJJW7MPPnjg==</Sha512>
+      <Path>system.runtime.serialization.json/4.0.2</Path>
+      <HashFile>System.Runtime.Serialization.Json.4.0.2.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.Serialization.Primitives">
+      <Version>[4.3.0]</Version>
+      <Sha512>/FL+NDrd5fk7/7nyxj+4Heut9zvGnG4FCB0OdyD1tyCBPwYbqw2vTI/RuFUl7OSbzpCtBEKDoibiqwotjqO7hw==</Sha512>
+      <Path>system.runtime.serialization.primitives/4.3.0</Path>
+      <HashFile>system.runtime.serialization.primitives.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Security.AccessControl">
+      <Version>[4.4.0]</Version>
+      <Sha512>2NRFPX/V81ucKQmqNgGBZrKGH/5ejsvivSGMRum0SMgPnJxwhuNkzVS1+7gC3R2X0f57CtwrPrXPPSe6nOp82g==</Sha512>
+      <Path>system.security.accesscontrol/4.4.0</Path>
+      <HashFile>system.security.accesscontrol.4.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Security.Claims">
+      <Version>[4.3.0]</Version>
+      <Sha512>N9zlb0bE9Txsg1mmkPsbsdejhZBWGljJoDNbNMVGXg7c3MnpCIB/OgWCT1uHE4yI9fViTNITjkh3lQn8SY7N+Q==</Sha512>
+      <Path>system.security.claims/4.3.0</Path>
+      <HashFile>System.Security.Claims.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.Algorithms">
+      <Version>[4.3.0]</Version>
+      <Sha512>widNMdJupc0fkv+TbddOVN/UHfv7O+U4HrSQzYHp3sr8JFNDhGNO4UI1VEZcfbpWkygXyViDNeeOksptLMR+sQ==</Sha512>
+      <Path>system.security.cryptography.algorithms/4.3.0</Path>
+      <HashFile>System.Security.Cryptography.Algorithms.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.Cng">
+      <Version>[4.3.0]</Version>
+      <Sha512>zwM6HS/lwHM2+AvaRJcQZAmOD3QdPT0d95dKzR/QvLuz6giW6uK02eLZB3KcSZRdT8wB52l2LKcXl7cNz5JW+g==</Sha512>
+      <Path>system.security.cryptography.cng/4.3.0</Path>
+      <HashFile>System.Security.Cryptography.Cng.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.Csp">
+      <Version>[4.3.0]</Version>
+      <Sha512>GOYVA+Gi9MnVZJpxL+l3nVYEofUtMQCtU+NC8cFwfrCcqZ5J6o/9D0q5iC2FC5794OiQs9EpiosgKNsBW53MLw==</Sha512>
+      <Path>system.security.cryptography.csp/4.3.0</Path>
+      <HashFile>System.Security.Cryptography.Csp.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.Encoding">
+      <Version>[4.3.0]</Version>
+      <Sha512>VzvcyBKCt2/Y8f++6eljp4HPkZxD9LAv6UCZKLetCSbA4L53Xa2vkji7T1wEZh2ySKdSetZRkvwBqCsYcsLZWQ==</Sha512>
+      <Path>system.security.cryptography.encoding/4.3.0</Path>
+      <HashFile>System.Security.Cryptography.Encoding.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.OpenSsl">
+      <Version>[4.3.0]</Version>
+      <Sha512>bOTSbw4dGEgQZkTvN0FP4VZuKGTW+TTFth7BLhMq+J1A8vKcdGeY6R3C+8GqsAXo5LRjRkmjs6oRkLYcw8F6lg==</Sha512>
+      <Path>system.security.cryptography.openssl/4.3.0</Path>
+      <HashFile>System.Security.Cryptography.OpenSsl.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.Primitives">
+      <Version>[4.3.0]</Version>
+      <Sha512>pPgKKHCAWt5SEe5SbjBRrbh/I4jD4UOUSSqtUI67SojbU97k5XmMXGavaYCP++WT+jaICF9j8SqewDEjqsmLqg==</Sha512>
+      <Path>system.security.cryptography.primitives/4.3.0</Path>
+      <HashFile>System.Security.Cryptography.Primitives.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.X509Certificates">
+      <Version>[4.3.0]</Version>
+      <Sha512>ddjx15BW7yql7DkR4zaWZKmJWzwI0djB4yFFpJDlN0EgEczgtS31DwF6AGYvozY1YS7b7qqszeojSgmN3meVCg==</Sha512>
+      <Path>system.security.cryptography.x509certificates/4.3.0</Path>
+      <HashFile>System.Security.Cryptography.X509Certificates.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.Xml">
+      <Version>[4.4.0]</Version>
+      <Sha512>1Xubvo4i+K+DO6YzVh6vBKmCl5xx/cAoiJEze6VQ+XwVQU25KQC9pPrmniz2EbbJnmoQ5Rm2FFjHsfQAi0Rs+Q==</Sha512>
+      <Path>system.security.cryptography.xml/4.4.0</Path>
+      <HashFile>system.security.cryptography.xml.4.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Security.Principal">
+      <Version>[4.3.0]</Version>
+      <Sha512>i3osBAZhvTpOzu4cCWoJvoBZNw2EG2D0JFQKIOPIcshQFlQJS1970FMOyQPdiOauhHHMY6W/bW/d+tSAz7fO3A==</Sha512>
+      <Path>system.security.principal/4.3.0</Path>
+      <HashFile>System.Security.Principal.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Security.Principal.Windows">
+      <Version>[4.4.0]</Version>
+      <Sha512>pP+AOzt1o3jESOuLmf52YQTF7H3Ng9hTnrOESQiqsnl2IbBh1HInsAMHYtoh75iUYV0OIkHmjvveraYB6zM97w==</Sha512>
+      <Path>system.security.principal.windows/4.4.0</Path>
+      <HashFile>system.security.principal.windows.4.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Spatial">
+      <Version>[5.8.2]</Version>
+      <Sha512>0RfZZJ8RlrfjoBPAF6pczX4Nd2kyLM8EX1PCP5Rqs/jOhJBUPYhpXjIsVAYN7kocj9IJ9XoJWAxWgXIDtJY2Ag==</Sha512>
+      <Path>system.spatial/5.8.2</Path>
+      <HashFile>System.Spatial.5.8.2.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Text.Encoding">
+      <Version>[4.3.0]</Version>
+      <Sha512>d8qgzDjvk9Rcwg8RaZlcw0/K6T6FuREb0gnza0yTjT2tpNFId3QddLp3mIcd6yxs7+B0+HxN1jJs0isQB6keCg==</Sha512>
+      <Path>system.text.encoding/4.3.0</Path>
+      <HashFile>System.Text.Encoding.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Text.Encoding.CodePages">
+      <Version>[4.4.0]</Version>
+      <Sha512>6JX7ZdaceBiLKLkYt8zJcp4xTJd1uYyXXEkPw6mnlUIjh1gZPIVKPtRXPmY5kLf6DwZmf5YLwR3QUrRonl7l0A==</Sha512>
+      <Path>system.text.encoding.codepages/4.4.0</Path>
+      <HashFile>system.text.encoding.codepages.4.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Text.Encoding.Extensions">
+      <Version>[4.3.0]</Version>
+      <Sha512>nvbrXitts4MDeaWZ41ViI+IJKcCKjxe/XBM1muez5xwwmIUzUkQGAPwBELu3Mbp49tQ6rX15jSUJwc1RbnfXzw==</Sha512>
+      <Path>system.text.encoding.extensions/4.3.0</Path>
+      <HashFile>System.Text.Encoding.Extensions.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Text.Encodings.Web">
+      <Version>[4.4.0]</Version>
+      <Sha512>l/tYeikqMHX2MD2jzrHDfR9ejrpTTF7wvAEbR51AMvzip1wSJgiURbDik4iv/w7ZgytmTD/hlwpplEhF9bmFNw==</Sha512>
+      <Path>system.text.encodings.web/4.4.0</Path>
+      <HashFile>system.text.encodings.web.4.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Text.RegularExpressions">
+      <Version>[4.3.0]</Version>
+      <Sha512>93H7UMiYG92VptTT701/PaH2v1bfR2c0hR1dGCBFtt9+/wr8HYZP7kkBCmBvSaNIUfV6Ek+JsHSJ5VoBy219rw==</Sha512>
+      <Path>system.text.regularexpressions/4.3.0</Path>
+      <HashFile>System.Text.RegularExpressions.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Threading">
+      <Version>[4.3.0]</Version>
+      <Sha512>qJJc605Z77PCUpJ7uNd4h51zVD/E2E7r6ugA7vx1H62rnetYx/HbFfjuIxzbAYi89qb0w6WLpM/RHMqCcvIzyA==</Sha512>
+      <Path>system.threading/4.3.0</Path>
+      <HashFile>System.Threading.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Threading.Overlapped">
+      <Version>[4.3.0]</Version>
+      <Sha512>jvIxzi8Gq918jpS2clVBtiz3gbMWQ+GSy1XcQ2RyUycFYN8s8vcupnTLckK10ymLxIQZJhO9zI8ZM9VuFCdyXQ==</Sha512>
+      <Path>system.threading.overlapped/4.3.0</Path>
+      <HashFile>System.Threading.Overlapped.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Threading.Tasks">
+      <Version>[4.3.0]</Version>
+      <Sha512>hr1Mlj77ilPwDPaNEbQviEhmGBTxUZNq/GU/G0w2cxNCkefc4mu0152BZIFnXIWUO7m3NHObDfkyeG4xXTdgyw==</Sha512>
+      <Path>system.threading.tasks/4.3.0</Path>
+      <HashFile>System.Threading.Tasks.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Threading.Tasks.Extensions">
+      <Version>[4.4.0]</Version>
+      <Sha512>SPKfFGbpQsK5Srz2Kq3URgvC90yoOyBE8H1quDA2+MAJ2HAzFmV3biOgPv2Ck3mPAvdKngo3QHi2BNwUQDRVvA==</Sha512>
+      <Path>system.threading.tasks.extensions/4.4.0</Path>
+      <HashFile>system.threading.tasks.extensions.4.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Threading.Tasks.Parallel">
+      <Version>[4.3.0]</Version>
+      <Sha512>wkOkgWoTqDzxqiqsBK9vmF5hZyxECEIs20UjzsfBdpxg0+qH4qBBV+0gkNoNUysLPXqiMBmX38qu9Wrz0b+JvA==</Sha512>
+      <Path>system.threading.tasks.parallel/4.3.0</Path>
+      <HashFile>System.Threading.Tasks.Parallel.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Threading.Thread">
+      <Version>[4.3.0]</Version>
+      <Sha512>XD3PP9q12mWslOPFt/vK8Li/mkYikiGoGSZ2zI6ZE0z7tPYuLjeNr0ROKTZ+7h6gYW0E+5AtU18NRn5kDkfvXA==</Sha512>
+      <Path>system.threading.thread/4.3.0</Path>
+      <HashFile>System.Threading.Thread.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Threading.ThreadPool">
+      <Version>[4.3.0]</Version>
+      <Sha512>PZJrRzrQxUM/sAQgGLcJ9b/09h8ustEBAezOpQkazCqZeyLAUkicmTkFyxlBzxRK6oGqCueX9VRiy0gm4Iyq+Q==</Sha512>
+      <Path>system.threading.threadpool/4.3.0</Path>
+      <HashFile>System.Threading.ThreadPool.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Threading.Timer">
+      <Version>[4.3.0]</Version>
+      <Sha512>8fUBbwPkJY2uyrBYnBp6Ka6SaFzT3RwZn2pNLbbrR13qdo1uQ10EUTpY6KzFDiU+gJ/ag1PABbQgYFmaXyfZxg==</Sha512>
+      <Path>system.threading.timer/4.3.0</Path>
+      <HashFile>System.Threading.Timer.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.ValueTuple">
+      <Version>[4.4.0]</Version>
+      <Sha512>BahUww/+mdP4ARCAh2RQhQTg13wYLVrBb9SYVgW8ZlrwjraGCXHGjo0oIiUfZ34LUZkMMR+RAzR7dEY4S1HeQQ==</Sha512>
+      <Path>system.valuetuple/4.4.0</Path>
+      <HashFile>system.valuetuple.4.4.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Xml.ReaderWriter">
+      <Version>[4.3.0]</Version>
+      <Sha512>L9U/16p6XQtQcc7YmZA2V2VX/or/wmI+XIzq5jjjf6rxd1gcY98byZc/CmTDtJlp5n01CH2VBvBVxhOrQsGDaA==</Sha512>
+      <Path>system.xml.readerwriter/4.3.0</Path>
+      <HashFile>System.Xml.ReaderWriter.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Xml.XDocument">
+      <Version>[4.3.0]</Version>
+      <Sha512>+w7z5Jk8jm5uGFZoo2l5tcur9+0ONUaIscN+mTfSQIRnkUTyc5ZsOMWGMe+pEtMXi+hewi/yTKQtsti+o6kV0g==</Sha512>
+      <Path>system.xml.xdocument/4.3.0</Path>
+      <HashFile>System.Xml.XDocument.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Xml.XmlDocument">
+      <Version>[4.3.0]</Version>
+      <Sha512>lDflE2FEcvJFb1lVU7TdYgm066YG43TuZXB0rAZYAeSwa8f3+Q+XubE8q32IZvR2OCUxDCENoZ1V8VoQ2Fp3Kg==</Sha512>
+      <Path>system.xml.xmldocument/4.3.0</Path>
+      <HashFile>system.xml.xmldocument.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Xml.XmlSerializer">
+      <Version>[4.0.11]</Version>
+      <Sha512>FrazwwqfIXTfq23mfv4zH+BjqkSFNaNFBtjzu3I9NRmG8EELYyrv/fJnttCIwRMFRR/YKXF1hmsMmMEnl55HGw==</Sha512>
+      <Path>system.xml.xmlserializer/4.0.11</Path>
+      <HashFile>System.Xml.XmlSerializer.4.0.11.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Xml.XPath">
+      <Version>[4.3.0]</Version>
+      <Sha512>XZMyo+kP1dyHeXHwAHv+umH4KGmDUR1v8/02TRuTCNh82eF+bA/LRmmso8NwgznetLwj24gVMFR8UBAIOR8A+Q==</Sha512>
+      <Path>system.xml.xpath/4.3.0</Path>
+      <HashFile>system.xml.xpath.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="System.Xml.XPath.XDocument">
+      <Version>[4.3.0]</Version>
+      <Sha512>jw9oHHEIVW53mHY9PgrQa98Xo2IZ0ZjrpdOTmtvk+Rvg4tq7dydmxdNqUvJ5YwjDqhn75mBXWttWjiKhWP53LQ==</Sha512>
+      <Path>system.xml.xpath.xdocument/4.3.0</Path>
+      <HashFile>system.xml.xpath.xdocument.4.3.0.nupkg.sha512</HashFile>
+    </PackageReference>
+    <PackageReference Include="WindowsAzure.Storage">
+      <Version>[8.1.4]</Version>
+      <Sha512>W6ZZ0/o7+3Qb77mRAQyLjPudHG3OMeeQ4p9yY13PUdJArmRCx2cLMm5F4tpIjJXxzHC0ew0oK7DMDGILMdfCnw==</Sha512>
+      <Path>windowsazure.storage/8.1.4</Path>
+      <HashFile>WindowsAzure.Storage.8.1.4.nupkg.sha512</HashFile>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="After.$(MSBuildThisFile)" Condition="Exists('After.$(MSBuildThisFile)')" />
+</Project>

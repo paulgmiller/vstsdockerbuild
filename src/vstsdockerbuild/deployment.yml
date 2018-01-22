@@ -1,0 +1,33 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: vstsdockerbuild
+spec:
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+          app: vstsdocerkbuild
+    spec:
+      containers:
+      - image: paulgmiller/vstsdockerbuild:beta
+        name: vstsdockerbuild
+        ports:
+        - containerPort: 80
+          protocol: TCP
+      #docker in docker might not be the best idea.https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/
+      #could instead mount the docker socker or expose the host daemon? 
+      - image: docker:17-dind
+        name: docker
+        ports:
+        - containerPort: 2375
+          protocol: TCP
+        securityContext:
+          privileged: true
+      #todo mount a shared volume for vsts files
+          
