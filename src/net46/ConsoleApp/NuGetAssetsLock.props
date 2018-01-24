@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <NuGetDeterministicPropsWasImported>true</NuGetDeterministicPropsWasImported>
+  </PropertyGroup>
+  <Import Project="Before.$(MSBuildThisFile)" Condition="Exists('Before.$(MSBuildThisFile)')" />
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>[10.0.3]</Version>
+      <Sha512>wBM7i7i3U2WX0ecor4zdVGvgrwFUjuigBoHKiL+nH39fCOpCPjBY3RDqJM32edvdyTAVdjzlccHsg41+/+zpSA==</Sha512>
+      <Path>newtonsoft.json/10.0.3</Path>
+      <HashFile>newtonsoft.json.10.0.3.nupkg.sha512</HashFile>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="After.$(MSBuildThisFile)" Condition="Exists('After.$(MSBuildThisFile)')" />
+</Project>
