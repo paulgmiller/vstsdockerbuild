@@ -22,6 +22,7 @@ spec:
           protocol: TCP
       #docker in docker might not be the best idea.https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/
       #could instead mount the docker socker or expose the host daemon? 
+      #or could we use https://github.com/jessfraz/img 
       - image: docker:17-dind
         name: docker
         ports:
