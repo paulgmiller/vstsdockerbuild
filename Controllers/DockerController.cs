@@ -72,7 +72,7 @@ tion/json" -method post
                 { "docker.io", auth }
             };
             log.LogInformation($"fechign manifest for {req.VSTSDropUri}");
-            var drop = new VSTSDropProxy(req.VSTSDropUri);
+            var drop = new DropDownloadCore.VSTSDropProxy(req.VSTSDropUri, "/", req.Pat);
             string tempDirectory = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
             var imageparams = new ImageBuildParameters();
             imageparams.Tags = new List<string> {req.tag};
@@ -142,6 +142,8 @@ tion/json" -method post
     public class BuildRequest
     {
         public string VSTSDropUri;
+        
+        public string Pat;
         public string tag;
         //docker repo info?        
     }
